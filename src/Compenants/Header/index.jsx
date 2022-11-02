@@ -57,7 +57,7 @@ export default function Header() {
                     >
                         <ul className="items-center justify-center space-y-8 lg:flex lg:space-x-6 lg:space-y-0">
                             <li className="text-white hover:opacity-50">
-                                <a href="/Participer">Comment participez</a>
+                                <a href="/participer">Comment participez</a>
                             </li>
                             <li className="text-white hover:opacity-50">
                                 <a href="">Blog</a>
