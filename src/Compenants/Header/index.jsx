@@ -60,7 +60,7 @@ export default function Header() {
                                 <a href="/participer">Comment participez</a>
                             </li>
                             <li className="text-white hover:opacity-50">
-                                <a href="">Blog</a>
+                                <a href="/faq">FAQ</a>
                             </li>
                             <li className="text-white hover:opacity-50">
                                 <a href="javascript:void(0)">About US</a>
