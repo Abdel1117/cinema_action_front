@@ -113,7 +113,7 @@ export default function Participer() {
 
             <section className='w-full bg-black my-10'>
 
-                <div className='w-full md:w-2/5 py-4 lg:px-0 px-12 text-center text-white border border-white mx-auto'>
+                <div className='w-full md:w-2/5 py-4 lg:px-0 px-12 text-center text-white mx-auto'>
 
                     <h2 className="text-2xl font-bold underline my-2">Pour les sous-titres</h2>
                     <div className='border border-black my-10'>
@@ -149,7 +149,7 @@ export default function Participer() {
 
                     <h2 className='text-center text-xl lg:text-4xl font-bold mt-10 mb-5'>Un exemple pour vous aidé</h2>
 
-                    <img className='lg:w-auto w-9/12' src="https://via.placeholder.com/700x500" alt="" />
+                    <iframe className='p-1 w-full aspect-video' src="https://www.youtube.com/embed/53rv31Bc5HM" title="Serge Crozon presentation" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     <p className='my-10'>Film Réalise par John Doe</p>
 
                 </div>
