@@ -10,7 +10,7 @@ export default function Question({ question, index }) {
 
     return (
         <>
-            <div className={`flex justify-between items-center flex-wrap border-2 p-1 lg:p-2 mb-2 bg-gradient-to-b from-white to-gray-200`} index={index}>
+            <div className={`flex justify-between items-center flex-wrap border-2 p-1 lg:p-2  bg-gradient-to-b from-white to-gray-200 rounded-md ${isExpended ? 'mb-0' : 'mb-5'}`} index={index}>
                 <div className=''>{question.question}</div>
                 <div>
                     {isExpended ?
@@ -23,15 +23,15 @@ export default function Question({ question, index }) {
                         </button>}
 
                 </div>
-                {
-                    isExpended &&
-                    <div className='block mt-3 w-full bg-white shadow-xl border p-1 lg:p-2'>
-                        {question.reponse}
-                    </div>
-                }
+
             </div>
 
-
+            {
+                isExpended &&
+                <div className='block mb-5 w-full rounded-md bg-white shadow-xl border p-1 lg:p-2'>
+                    {question.reponse}
+                </div>
+            }
         </>
 
     )

@@ -63,7 +63,7 @@ export default function Header() {
                                 <a href="/faq">FAQ</a>
                             </li>
                             <li className="text-white hover:opacity-50">
-                                <a href="javascript:void(0)">About US</a>
+                                <a href="/about">About US</a>
                             </li>
                             <li className="text-white hover:opacity-50">
                                 <a href="javascript:void(0)">Contact US</a>
