@@ -6,6 +6,7 @@ import Participer from './Page/Participer';
 import Faq from './Page/Faq';
 import About from './Page/A_Propos';
 import { BrowserRouter, Routes, Route } from "react-router-dom"
+import Inscription from './Page/Inscription';
 
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
         <Route path='/participer' element={<Participer />} />
         <Route path='/faq' element={<Faq />} />
         <Route path='/about' element={<About />} />
+        <Route path='/inscription' element={<Inscription />} />
 
         {/* <Route path="/Contact" element={<Contact />} /> */}
 

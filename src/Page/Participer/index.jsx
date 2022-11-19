@@ -12,7 +12,7 @@ export default function Participer() {
 
             <section className='lg:w-3/5 mx-auto grid lg:grid-cols-2 gap-5 mt-6 mb-12'>
 
-                <div className='bg-red-600 lg:p-10 flex flex-col text-center mx-4 p-2 lg:mx-0'>
+                <div className='bg-yellow-dragon lg:p-10 flex flex-col text-center mx-4 p-2 lg:mx-0'>
                     <h2 className='text-xl lg:text-3xl font-bold mx-auto my-4'>Mon Titre</h2>
                     <p className='text-center mx-auto'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Possimus quae soluta vitae nisi exercitationem nulla aliquam cupiditate ex delectus voluptatum, expedita, neque minima sequi laboriosam inventore!</p>
 
@@ -20,7 +20,7 @@ export default function Participer() {
 
 
                 </div>
-                <div className='bg-red-600 lg:p-10 flex flex-col text-center mx-4 p-2 lg:mx-0'>
+                <div className='bg-yellow-dragon  lg:p-10 flex flex-col text-center mx-4 p-2 lg:mx-0'>
                     <h2 className='text-xl lg:text-3xl font-bold mx-auto my-4'>Mon Titre</h2>
                     <p className='text-center mx-auto'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Possimus quae soluta vitae nisi exercitationem nulla aliquam cupiditate ex delectus voluptatum, expedita, neque minima sequi laboriosam inventore!</p>
 
@@ -28,7 +28,7 @@ export default function Participer() {
                 </div>
 
             </section>
-            <section className='w-full bg-red-600 text-center my-10'>
+            <section className='w-full bg-yellow-dragon  text-center my-10'>
                 <div className='p-1 lg:py-4 w-10/12 lg:w-3/6 mx-auto'>
 
                     <h2 className='font-bold text-xl lg:text-3xl my-4'>Mon Titre</h2>
@@ -111,7 +111,7 @@ export default function Participer() {
                 </div>
             </section>
 
-            <section className='w-full bg-black my-10'>
+            <section className='w-full bg-yellow-dragon  my-10'>
 
                 <div className='w-full md:w-2/5 py-4 lg:px-0 px-12 text-center text-white mx-auto'>
 

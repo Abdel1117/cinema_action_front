@@ -16,7 +16,7 @@ export default function About() {
                         Il est ouvert à toutes et à tous, jeunes espoirs et talents confirmés autour d’une même passion : Le cinéma d’action.
                     </p>
 
-                    <div className='w-10/12 mx-auto flex justify-betweenflex-wrap'>
+                    <div className='w-10/12 mx-auto flex justify-between flex-wrap'>
                         <img className='my-5 mx-auto object-cover shadow-xl' src="https://via.placeholder.com/650" alt="" />
                         <img className='my-5 mx-auto object-cover shadow-xl' src="https://via.placeholder.com/650" alt="" />
                     </div>
@@ -32,31 +32,31 @@ export default function About() {
             </section>
 
 
-            <section className='w-screen bg-red-800 p-3 lg:p-20 my-28'>
+            <section className='w-screen  bg-yellow-dragon p-3 lg:p-20 my-28'>
                 <div className='w-10/12 mx-auto grid md:grid-cols-2 lg:grid-cols-5  lg:place-items-start gap-24 '>
 
                     <div className='flex flex-col items-center justify-center w-full'>
-                        <img className='w-24 lg:w-auto h-auto object-cover' src={Icon_Thinking} alt="" />
+                        <img className='w-[90px] h-auto object-cover' src={Icon_Thinking} alt="" />
                         <h2 className='text-xl lg:text-2xl text-center '>1/ Inspiration</h2>
                         <p className='text-md text-center'> Trouvez la bonne idée et les talents pour vous accompagner dans cette aventure ! </p>
                     </div>
                     <div className='flex flex-col items-center justify-center w-full'>
-                        <img className=' w-24 lg:w-auto h-auto object-cover' src={Sign_Up} alt="" />
+                        <img className=' w-[90px] h-auto object-cover' src={Sign_Up} alt="" />
                         <h2 className='text-xl lg:text-2xl text-center '>2/ Inscription</h2>
-                        <p className='text-md text-center '> Créez un compte sur le site en quelques secondes pour recevoir toutes les informations sur le festival ! </p>
+                        <p className='text-md text-center '> Créez un compte sur le site en <quelqu>        </quelqu>es secondes pour recevoir toutes les informations sur le festival ! </p>
                     </div>
                     <div className='flex flex-col items-center justify-center w-full'>
-                        <img className=' w-24 lg:w-auto h-auto object-cover' src={Content_Production} alt="" />
+                        <img className=' w-[90px] h-auto object-cover' src={Content_Production} alt="" />
                         <h2 className='text-xl lg:text-2xl text-center '>3/ Réalisation</h2>
                         <p className='text-md text-center '> Préparez votre projet, organisez votre tournage et finalisez votre film. Attention à bien respecter la durée de 2min20 et le thème imposé ! </p>
                     </div>
                     <div className='flex flex-col items-center justify-center w-full'>
-                        <img className=' w-24 lg:w-auto h-auto object-cover' src={Video_Production} alt="" />
+                        <img className=' w-[90px] h-auto object-cover' src={Video_Production} alt="" />
                         <h2 className='text-xl lg:text-2xl text-center '>4/ Participation</h2>
                         <p className='text-md text-center '> Envoyez votre film via votre espace personnel avant la date limite puis complétez les informations sur l’œuvre, les sous-titres et l’équipe ! </p>
                     </div>
                     <div className='flex flex-col items-center justify-center w-full lg:col-span-1 col-span-full'>
-                        <img className='w-24 lg:w-auto h-auto object-cover' src={Checked} alt="" />
+                        <img className='w-[90px] h-auto object-cover' src={Checked} alt="" />
                         <h2 className='text-xl lg:text-2xl text-center '>5/ Confirmation</h2>
                         <p className='text-md text-center '> Une fois votre participation validée, vous recevrez un email pour découvrir la date de diffusion. Ensuite, ce sera à vous de jouer ! </p>
                     </div>
@@ -64,7 +64,7 @@ export default function About() {
             </section>
 
 
-            <section className='w-screen bg-red-800 p-3 lg:p-20 mt-28'>
+            <section className='w-screen bg-yellow-dragon p-3 lg:p-20 mt-28'>
                 <div className='flex flex-col justify-center items-center'>
                     <h1 className='text-xl lg:text-3xl text-center font-bold'>D'autres Question ? </h1>
                     <button className='inline-block mt-5 px-2 py-1 sm:px-6 sm:py-2.5 bg-blue-600 text-white font-medium leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out text-sm lg:text-xl'>

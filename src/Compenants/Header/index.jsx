@@ -78,7 +78,7 @@ export default function Header() {
                                 Connexion
                             </a>
                             <a
-                                href="javascript:void(0)"
+                                href="/inscription"
                                 className="inline-block w-full px-4 py-2 text-center text-gray-800 hover:text-white bg-white rounded-md shadow hover:bg-green-800"
                             >
                                 Inscription
@@ -94,7 +94,7 @@ export default function Header() {
                         Connexion
                     </a>
                     <a
-                        href="javascript:void(0)"
+                        href="inscription"
                         className="px-4 py-2 text-gray-800 bg-white rounded-md shadow hover:bg-green-800 hover:text-white"
                     >
                         Inscription
