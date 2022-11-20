@@ -1,6 +1,12 @@
 import React from 'react'
+import { useState } from 'react'
 
 export default function Inscription() {
+
+
+    const [form, setForm] = useState([]);
+
+
   return (
     <main className='mx-auto w-11/12 lg:w-8/12'>
         <section className='mx-auto px-4 py-6 mt-12'>
@@ -57,7 +63,56 @@ export default function Inscription() {
                 <input type="text" name="floating_company" id="floating_company" class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none  focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required />
                 <label for="floating_company" class="peer-focus:font-medium absolute text-sm text-gray-500  duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Entreprise Ou Association</label>
             </div>
-        </div>
+            <div class="relative z-0 mb-6 w-full group">
+            <label for="floating_sexe" class="peer-focus:font-medium absolute text-sm text-gray-500  duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Sexe</label>
+                <select className='class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none  focus:outline-none focus:ring-0 focus:border-blue-600 peer' name="floating_sexe" id="floating_sexe">
+                    <option value="" selected></option>
+                    <option value="H">Homme</option>
+                    <option value="F">Femme</option>
+                    <option value="None">Je ne souhaite pas Repondre </option>
+                </select>
+            
+            </div>
+
+            <div className='relative z-0 mb-6 w-full group'>
+            <label for="floating_birthday" class="peer-focus:font-medium absolute text-sm text-gray-500  duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Date de Naissance </label>
+            <input className='block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none  focus:outline-none focus:ring-0 focus:border-blue-600 peer' id='floating_birthday' name='floating_birthday' type="date" />
+            </div>
+
+
+
+            <div className='relative z-0 mb-6 w-full group'>
+            <label for="floating_adress" class="peer-focus:font-medium absolute text-sm text-gray-500  duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Adresse  </label>
+            <input className='block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none  focus:outline-none focus:ring-0 focus:border-blue-600 peer' name='floating_adress' id='floating_adress' type="text" />
+            </div>
+
+            <div className='relative z-0 mb-6 w-full group'>
+            <label for="floating_code_postal" class="peer-focus:font-medium absolute text-sm text-gray-500  duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Code Postal  </label>
+            <input className='block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none  focus:outline-none focus:ring-0 focus:border-blue-600 peer' name='floating_code_postal' id='floating_code_postal' type="text" />
+            </div>
+
+
+
+            <div className='relative z-0 mb-6 w-full group'>
+            <label for="floating_ville" class="peer-focus:font-medium absolute text-sm text-gray-500  duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Ville  </label>
+            <input className='block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none  focus:outline-none focus:ring-0 focus:border-blue-600 peer' name='floating_ville' id='floating_ville' type="text" />
+            </div>
+
+            <div className='relative z-0 mb-6 w-full group'>
+            <label for="floating_country" class="peer-focus:font-medium absolute text-sm text-gray-500  duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Pays  </label>
+           <select className='block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none  focus:outline-none focus:ring-0 focus:border-blue-600 peer' name="floating_country" id="floating_country">
+                <option value="" selected></option>
+           </select>
+            </div>
+            </div>
+
+            <div className='grid md:grid-cols-2'>
+
+                <label className=' w-40 h-40'>
+                    <img className='rounded-full' src="https://via.placeholder.com/120" alt="" />
+                    <input className='hidden' type="file" name="floating_picture_user" id="floating_picture_user" />
+                </label>
+            </div>
             <button type="submit" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center ">Envoyer</button>
         </form>
 
@@ -65,7 +120,7 @@ export default function Inscription() {
         
     </section>
 
-
+ 
     </main>
   )
 }
