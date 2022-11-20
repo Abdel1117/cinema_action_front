@@ -43,8 +43,8 @@ export default function Inscription() {
                     <p className='text-md lg:text-lg'> Elles sont obligatoires pour participer et vous permettront de vous identifier lors de votre prochaine visite. Ce sont également elles qui feront foi si votre film est récompensé. Si vous êtes un collectif, indiquez les informations du contact principal. </p>
                 </div>
 
-                <div>
-                    <form onSubmit={handleForm} method="post" id="form_sign">
+                <div className='p-1 md:p-4 shadow-lg'>
+                    <form onSubmit={handleForm} method="POST" id="form_sign">
                         <div class="relative z-0 mb-6 w-full group">
                             <input type="email" name="floating_email" id="floating_email" class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none  focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " value={form.email} onChange={handleChange} required />
                             <label for="floating_email" class="peer-focus:font-medium absolute text-sm text-gray-500  duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600  peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Adresse Email </label>
@@ -114,7 +114,7 @@ export default function Inscription() {
                             <div className='relative z-0 mb-6 w-full group'>
                                 <label for="floating_country" class="peer-focus:font-medium absolute text-sm text-gray-500  duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Pays  </label>
                                 <select className='block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none  focus:outline-none focus:ring-0 focus:border-blue-600 peer' name="floating_country" id="floating_country" value={form.floating_country} onChange={handleChange} required>
-                                    <option value="" selected></option>
+                                    <option value="France" selected>France</option>
                                 </select>
                             </div>
                         </div>
@@ -132,6 +132,19 @@ export default function Inscription() {
                                 <label for="floating_pseudo" class="peer-focus:font-medium absolute text-sm text-gray-500  duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Pseudo  </label>
                                 <input className='block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none  focus:outline-none focus:ring-0 focus:border-blue-600 peer' name='floating_pseudo' id='floating_pseudo' type="text" value={form.floating_pseudo} onChange={handleChange} required />
                             </div>
+                        </div>
+
+
+                        <div className='p-1'>
+
+                            <input type="checkbox" name='floating_check'
+                                id='floating_check'
+                                value={form.floating_check}
+                                onChange={handleChange}
+                                required
+                            />
+                            <label> Je reconnais avoir lu, compris et accepté le règlement du concours.</label>
+
                         </div>
                         <button type="submit" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center ">Envoyer</button>
                     </form>

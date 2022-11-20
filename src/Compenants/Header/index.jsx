@@ -72,7 +72,7 @@ export default function Header() {
 
                         <div className="mt-3 space-y-2 lg:hidden inline-block w-full">
                             <a
-                                href="javascript:void(0)"
+                                href="/connexion"
                                 className="inline-block w-full px-4 py-2 text-center text-white bg-blue-600 rounded-md shadow hover:bg-green-800"
                             >
                                 Connexion
@@ -88,13 +88,13 @@ export default function Header() {
                 </div>
                 <div className="hidden space-x-2 lg:inline-block">
                     <a
-                        href="javascript:void(0)"
+                        href="/connexion"
                         className="px-4 py-2 text-white bg-blue-600 rounded-md shadow hover:bg-green-800"
                     >
                         Connexion
                     </a>
                     <a
-                        href="inscription"
+                        href="/inscription"
                         className="px-4 py-2 text-gray-800 bg-white rounded-md shadow hover:bg-green-800 hover:text-white"
                     >
                         Inscription
