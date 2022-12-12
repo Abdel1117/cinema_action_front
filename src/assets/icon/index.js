@@ -1,0 +1,9 @@
+export const Facebook = require("./facebook-icon-social-media.png");
+export const Twitter = require("./twitter_new.png");
+export const Instagram = require("./instagram.png");
+export const YouTube = require("./yt.png")
+export const Icon_Thinking = require('../icon/icon_about/thinking.jpg')
+export const Sign_Up = require("../icon/icon_about/sign-up.png")
+export const Content_Production = require('../icon/icon_about/content-production.png')
+export const Video_Production = require('../icon/icon_about/video-production.png')
+export const Checked = require('../icon/icon_about/checked.jpg')

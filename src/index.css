@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@font-face {
+    font-family: "Comix";
+    src: url("./assets/font/ComicNeue-Regular.ttf");
+}
+
+html {
+    font-family: "Comix";
+}
