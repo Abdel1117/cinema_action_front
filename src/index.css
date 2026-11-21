@@ -2,12 +2,211 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  :root {
+    color-scheme: dark;
+    --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  }
 
-@font-face {
-    font-family: "Comix";
-    src: url("./assets/font/ComicNeue-Regular.ttf");
+  html {
+    @apply bg-ink text-paper font-sans antialiased;
+    font-size: 100%;
+    -webkit-text-size-adjust: 100%;
+    scroll-padding-top: 6rem;
+  }
+
+  body {
+    @apply bg-ink text-paper;
+    font-feature-settings: "kern";
+    text-rendering: optimizeLegibility;
+  }
+
+  ::selection {
+    background: #d71e28;
+    color: #ffffff;
+  }
+
+  :focus-visible {
+    outline: 2px solid #f5f5f5;
+    outline-offset: 3px;
+  }
+
+  .on-paper :focus-visible {
+    outline-color: #0a0a0a;
+  }
+
+  a {
+    text-underline-offset: 0.22em;
+    text-decoration-thickness: 1px;
+  }
+
+  input,
+  select,
+  textarea {
+    caret-color: #d71e28;
+  }
+
+  h1,
+  h2,
+  h3 {
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  html {
+    scrollbar-color: #3d3d3d #0a0a0a;
+  }
+
+  ::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #0a0a0a;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #3d3d3d;
+    border: 3px solid #0a0a0a;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #5a5a5a;
+  }
+
+  input[type="date"]::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+    opacity: 0.7;
+    cursor: pointer;
+  }
 }
 
-html {
-    font-family: "Comix";
+@layer components {
+  .wrap {
+    @apply mx-auto w-full max-w-page px-6 md:px-10 lg:px-16;
+  }
+
+  .display {
+    @apply font-display font-normal uppercase;
+    line-height: 0.96;
+    letter-spacing: -0.005em;
+  }
+
+  .btn {
+    @apply inline-flex items-center justify-center gap-3 px-7 py-4 text-base font-semibold transition-colors duration-150;
+    min-height: 3.25rem;
+  }
+
+  .btn-primary {
+    @apply btn bg-signal text-white hover:bg-signal-hover;
+  }
+
+  .btn-outline {
+    @apply btn border border-paper text-paper hover:bg-paper hover:text-ink;
+  }
+
+  .btn-dark {
+    @apply btn bg-ink text-paper hover:bg-ink-raised;
+  }
+
+  .btn-outline-dark {
+    @apply btn border border-ink text-ink hover:bg-ink hover:text-paper;
+  }
+
+  .link-arrow {
+    @apply inline-flex items-center gap-2 font-semibold underline decoration-1 underline-offset-[0.3em] transition-colors duration-150;
+  }
+
+  .field-label {
+    @apply mb-2 block text-sm font-semibold text-paper;
+  }
+
+  .field {
+    @apply block w-full border border-line-strong bg-ink-raised px-4 py-3 text-base text-paper transition-colors duration-150 placeholder:text-mute-soft hover:border-mute-soft focus:border-paper focus:outline-none;
+    min-height: 3.25rem;
+    border-radius: 0;
+  }
+
+  .field[aria-invalid="true"] {
+    @apply border-signal-text;
+  }
+
+  .field-hint {
+    @apply mt-2 text-sm text-mute;
+  }
+
+  .field-error {
+    @apply mt-2 text-sm font-medium text-signal-text;
+  }
+}
+
+@layer components {
+  .hero-scrim {
+    background-image: linear-gradient(
+      180deg,
+      rgba(10, 10, 10, 0.75) 0%,
+      rgba(10, 10, 10, 0.2) 20%,
+      rgba(10, 10, 10, 0.3) 45%,
+      rgba(10, 10, 10, 0.88) 78%,
+      #0a0a0a 100%
+    );
+  }
+}
+
+@layer utilities {
+  .tabular {
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+/* Hero title: the one authored entrance. Content stays visible without motion. */
+.rise-line,
+.rise-line > span {
+  display: block;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .rise-line {
+    overflow: hidden;
+    /* room for accents (É) above the tight line box, and descenders below */
+    padding-top: 0.22em;
+    margin-top: -0.22em;
+    padding-bottom: 0.04em;
+    margin-bottom: -0.04em;
+  }
+
+  .rise-line > span {
+    display: block;
+    animation: rise 1100ms var(--ease-out) both;
+    animation-delay: calc(var(--i, 0) * 110ms + 150ms);
+  }
+
+  .fade-up {
+    animation: fade-up 900ms var(--ease-out) both;
+    animation-delay: var(--d, 600ms);
+  }
+
+  @keyframes rise {
+    from {
+      transform: translateY(105%);
+    }
+    to {
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fade-up {
+    from {
+      opacity: 0;
+      transform: translateY(14px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
 }

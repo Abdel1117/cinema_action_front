@@ -1,77 +1,64 @@
-import React from 'react'
-import { useEffect, useState } from 'react'
+import React, { useEffect, useMemo, useState } from 'react'
+import { FESTIVAL } from '../../assets/Data/festival'
 
-export default function TimeStamp() {
-    const [expiryTime, setExpiryTime] = useState("1 jan 2023 08:00:00");
-    const [countdownTime, setCountdownTime] = useState({
-        countdownDays: "",
-        countdownHours: "",
-        countdownlMinutes: "",
-        countdownSeconds: "",
-    });
+const DAY = 86400000
+const HOUR = 3600000
+const MINUTE = 60000
 
-    const countdownTimer = () => {
-        const timeInterval = setInterval(() => {
-            const countdownDateTime = new Date(expiryTime).getTime();
-            const currentTime = new Date().getTime();
-            const remainingDayTime = countdownDateTime - currentTime;
-            const totalDays = Math.floor(remainingDayTime / (1000 * 60 * 60 * 24));
-            const totalHours = Math.floor(
-                (remainingDayTime % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
-            );
-            const totalMinutes = Math.floor(
-                (remainingDayTime % (1000 * 60 * 60)) / (1000 * 60)
-            );
-            const totalSeconds = Math.floor(
-                (remainingDayTime % (1000 * 60)) / 1000
-            );
+const pad = (n) => String(n).padStart(2, '0')
 
-            const runningCountdownTime = {
-                countdownDays: totalDays,
-                countdownHours: totalHours,
-                countdownMinutes: totalMinutes,
-                countdownSeconds: totalSeconds,
-            };
+export function formatDate(iso) {
+    return new Intl.DateTimeFormat('fr-FR', { day: 'numeric', month: 'long', year: 'numeric' }).format(new Date(iso))
+}
 
-            setCountdownTime(runningCountdownTime);
-
-            if (remainingDayTime < 0) {
-                clearInterval(timeInterval);
-                setExpiryTime(false);
-            }
-        }, 1000);
-    };
-
+export default function TimeStamp({ target = FESTIVAL.registrationOpens, className = '' }) {
+    const targetMs = useMemo(() => new Date(target).getTime(), [target])
+    const [now, setNow] = useState(() => Date.now())
 
     useEffect(() => {
-        countdownTimer();
-    });
+        if (targetMs <= Date.now()) return undefined
+        const id = setInterval(() => setNow(Date.now()), 1000)
+        return () => clearInterval(id)
+    }, [targetMs])
+
+    const remaining = Math.max(0, targetMs - now)
+    const dateLabel = formatDate(target)
+
+    if (remaining === 0) {
+        return (
+            <div className={className}>
+                <p className="text-sm font-semibold text-paper">Les inscriptions sont ouvertes</p>
+                <p className="mt-1 text-sm text-mute">depuis le {dateLabel}</p>
+            </div>
+        )
+    }
+
+    const units = [
+        { value: Math.floor(remaining / DAY), label: 'jours' },
+        { value: Math.floor((remaining % DAY) / HOUR), label: 'heures' },
+        { value: Math.floor((remaining % HOUR) / MINUTE), label: 'minutes' },
+        { value: Math.floor((remaining % MINUTE) / 1000), label: 'secondes' },
+    ]
+
     return (
-        <div className="grid grid-flow-col gap-5 lg:gap-10 text-center auto-cols-max  mx-auto w-fit mb-4">
-            <div className="flex flex-col p-2 bg-neutral rounded-box text-neutral-content shadow-xl">
-                <span className="countdown font-mono lg:text-5xl">
-                    <span>{countdownTime.countdownDays}</span>
-                </span>
-                days
-            </div>
-            <div className="flex flex-col p-2 bg-neutral rounded-box text-neutral-content shadow-xl">
-                <span className="countdown font-mono lg:text-5xl">
-                    <span>{countdownTime.countdownHours}</span>
-                </span>
-                hours
-            </div>
-            <div className="flex flex-col p-2 bg-neutral rounded-box text-neutral-content shadow-xl">
-                <span className="countdown font-mono lg:text-5xl">
-                    <span>{countdownTime.countdownMinutes}</span>
-                </span>
-                min
-            </div>
-            <div className="flex flex-col p-2 bg-neutral rounded-box text-neutral-content shadow-xl">
-                <span className="countdown font-mono lg:text-5xl">
-                    <span>{countdownTime.countdownSeconds}</span>
-                </span>
-                sec
-            </div>
+        <div className={className}>
+            <p className="flex items-baseline justify-between gap-4 text-sm">
+                <span className="font-semibold text-paper">Ouverture des inscriptions</span>
+                <span className="text-mute">{dateLabel}</span>
+            </p>
+            <p className="sr-only">
+                Les inscriptions ouvrent le {dateLabel}, dans {units[0].value} jours.
+            </p>
+            <ol className="mt-3 grid grid-cols-4 divide-x divide-paper/25 border border-paper/25 bg-ink/50" aria-hidden="true">
+                {units.map((u) => (
+                    <li key={u.label} className="px-3 py-3 sm:px-4 sm:py-4">
+                        <span className="tabular block font-display text-[2rem] leading-none text-paper sm:text-[2.75rem]">
+                            {pad(u.value)}
+                        </span>
+                        <span className="mt-2 block text-xs text-mute">{u.label}</span>
+                    </li>
+                ))}
+            </ol>
         </div>
     )
 }

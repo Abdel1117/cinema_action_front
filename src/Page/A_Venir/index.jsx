@@ -1,51 +1,48 @@
 import React from 'react'
-import { Facebook, Twitter, Instagram, YouTube } from '../../assets/icon/index'
+import { Link } from 'react-router-dom'
+import PageHeader from '../../Compenants/PageHeader'
+import { ArrowRight, ArrowUpRight, SocialIcon } from '../../Compenants/Icons'
+import { FESTIVAL } from '../../assets/Data/festival'
 
-export default function A_VENIR() {
+const DEFAULT_LEAD =
+    'Le formulaire de contact arrive bientôt. En attendant, retrouvez le festival et écrivez-nous sur les réseaux.'
+
+export default function A_VENIR({ title = 'Contact', lead = DEFAULT_LEAD }) {
     return (
-        <>
-            <main className='flex justify-center p-5 md:p-20'>
-                <section className='border shadow-lg w-11/12  md:w-9/12  p-1 md:p-4 mx-auto my-auto  flex flex-col justify-evenly rounded-lg'>
+        <main id="contenu">
+            <PageHeader title={title} lead={lead} />
 
-                    <h1 className='text-center font-bold text-xl md:text-3xl p-1 my-5'>Cinéma Action Festival</h1>
-                    <p className='text-lg text-center my-5'>Cette page est en cours de développement </p>
-                    <div className='w-fit  mx-auto border'>
-                        <img className='mx-auto' src="https://via.placeholder.com/250" alt="" />
-                    </div>
+            <section aria-labelledby="reseaux-title" className="wrap py-16 lg:py-24">
+                <h2 id="reseaux-title" className="sr-only">
+                    Réseaux sociaux
+                </h2>
+                <ul className="border-t border-line">
+                    {FESTIVAL.social.map((s) => (
+                        <li key={s.id} className="border-b border-line">
+                            <a
+                                href={s.href}
+                                className="group flex items-center justify-between gap-6 py-7 transition-colors duration-150 hover:text-mute lg:py-9"
+                            >
+                                <span className="flex items-center gap-5 sm:gap-8">
+                                    <SocialIcon id={s.id} className="h-7 w-7 shrink-0 sm:h-9 sm:w-9" />
+                                    <span className="display text-[clamp(2.5rem,7vw,5.5rem)]">{s.label}</span>
+                                </span>
+                                <ArrowUpRight className="h-7 w-7 shrink-0 transition-transform duration-300 ease-out group-hover:-translate-y-1 group-hover:translate-x-1" />
+                            </a>
+                        </li>
+                    ))}
+                </ul>
 
-                    <div className='grid md:grid-cols-2 lg:grid-cols-4 gap-6 justify-items-center place-items-center mt-10'>
-                        <div className='' >
-                            <a href="#">
-                                <h2 className='my-4 text-center font-bold text-xl md:text-2xl hover:underline'>
-                                    <img className='w-[75px] md:w-[90px] lg:w-[120px] h-auto mx-auto' src={Facebook} alt="" />
-                                    Facebook</h2>
-                            </a>
-                        </div>
-                        <div className=''>
-                            <a href="#">
-                                <h2 className='my-4 text-center font-bold text-xl md:text-2xl hover:underline'>
-                                    <img className='w-[75px] md:w-[90px] lg:w-[120px] h-auto mx-auto' src={Twitter} alt="" />
-                                    Twitter</h2>
-                            </a>
-                        </div>
-                        <div className=''>
-                            <a href="#">
-                                <h2 className='my-4 text-center font-bold text-xl md:text-2xl hover:underline'>
-                                    <img className='w-[75px] md:w-[90px] lg:w-[120px] h-auto mx-auto' src={Instagram} alt="" />
-                                    Instagram</h2>
-                            </a>
-                        </div>
-                        <div className='' >
-                            <a href="#">
-                                <h2 className='my-4 text-center font-bold text-xl md:text-2xl hover:underline'>
-                                    <img className='w-[75px] md:w-[90px] lg:w-[120px] h-auto mx-auto' src={YouTube} alt="" />
-                                    You Tube</h2>
-                            </a>
-                        </div>
-                    </div>
-                </section>
-
-            </main>
-        </>
+                <div className="mt-16 flex flex-col gap-3 sm:flex-row">
+                    <Link to="/faq" className="btn-outline">
+                        Consulter la FAQ
+                        <ArrowRight />
+                    </Link>
+                    <Link to="/" className="btn inline-flex text-mute hover:text-paper">
+                        Retour à l'accueil
+                    </Link>
+                </div>
+            </section>
+        </main>
     )
 }

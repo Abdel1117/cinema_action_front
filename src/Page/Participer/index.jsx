@@ -1,161 +1,164 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
+import PageHeader from '../../Compenants/PageHeader'
+import { ArrowRight } from '../../Compenants/Icons'
+import { FESTIVAL } from '../../assets/Data/festival'
+
+// PROVISOIRE : conditions et spécifications rédigées comme base de travail, à valider dans le règlement officiel.
+const RULES = [
+    ['Durée', `${FESTIVAL.filmDuration} maximum, génériques compris. Un film plus long n'est pas retenu.`],
+    ['Thème', 'Imposé et identique pour tous. Il est dévoilé à l\'ouverture des inscriptions.'],
+    ['Pour qui', 'Ouvert à toutes et à tous, jeunes espoirs et talents confirmés. Les mineurs participent avec l\'accord d\'un représentant légal.'],
+    ['En équipe', 'Seul ou en collectif. Une personne crée le compte et reste le contact principal du film.'],
+    ['Un film', 'Un seul film par personne inscrite, réalisé spécialement pour le concours.'],
+    ['Sécurité', 'Combats et cascades répétés et encadrés par une personne expérimentée. Armes réelles interdites sur le tournage.'],
+    ['Droits', 'Musiques, images et marques utilisées doivent être libres de droits ou autorisées par écrit.'],
+]
+
+const SPECS = [
+    {
+        title: 'Vidéo',
+        rows: [
+            ['Fichier', 'MP4 ou MOV'],
+            ['Codec', 'H.264 ou Apple ProRes 422'],
+            ['Définition', '1920 × 1080 minimum, 4K accepté'],
+            ['Cadence', '24, 25 ou 30 images/s, constante'],
+            ['Format', '16:9, ou 2,39:1 avec bandes noires'],
+        ],
+    },
+    {
+        title: 'Son',
+        rows: [
+            ['Canaux', 'Stéréo 2.0'],
+            ['Échantillonnage', '48 kHz, 24 bits'],
+            ['Niveau', '-23 LUFS intégrés (EBU R128)'],
+            ['Crête', '-1 dBTP maximum'],
+            ['Langue', 'Libre, sous-titrée en français'],
+        ],
+    },
+    {
+        title: 'Sous-titres',
+        rows: [
+            ['Fichier', '.srt séparé, non incrusté'],
+            ['Langues', 'Français obligatoire, anglais conseillé'],
+            ['Encodage', 'UTF-8'],
+            ['Lignes', '2 lignes maximum'],
+            ['Longueur', '42 caractères par ligne maximum'],
+        ],
+    },
+]
 
 export default function Participer() {
     return (
-        <main>
-            <h1 className='text-xl font-bold lg:text-4xl text-center mt-20 mb-10'>Condition de Participation</h1>
+        <main id="contenu">
+            <PageHeader
+                title="Participer"
+                lead={`Un court métrage d'action de ${FESTIVAL.filmDuration}, sur un thème imposé. Voici ce qu'il faut savoir avant de tourner.`}
+            >
+                <Link to="/inscription" className="btn-primary mt-8">
+                    S'inscrire au concours
+                    <ArrowRight />
+                </Link>
+            </PageHeader>
 
-            <section className='mx-1 lg:mx-0'>
-                <p className='text-center mx-auto lg:w-2/4'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Atque facilis laudantium fugiat id cumque modi itaque vero error? Consectetur quisquam laudantium, porro veritatis minus omnis doloremque quos quae voluptatibus reprehenderit.</p>
-
-            </section>
-
-            <section className='lg:w-3/5 mx-auto grid lg:grid-cols-2 gap-5 mt-6 mb-12'>
-
-                <div className='bg-yellow-dragon lg:p-10 flex flex-col text-center mx-4 p-2 lg:mx-0'>
-                    <h2 className='text-xl lg:text-3xl font-bold mx-auto my-4'>Mon Titre</h2>
-                    <p className='text-center mx-auto'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Possimus quae soluta vitae nisi exercitationem nulla aliquam cupiditate ex delectus voluptatum, expedita, neque minima sequi laboriosam inventore!</p>
-
-                    <p className='mt-4'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magni, tempora.</p>
-
-
-                </div>
-                <div className='bg-yellow-dragon  lg:p-10 flex flex-col text-center mx-4 p-2 lg:mx-0'>
-                    <h2 className='text-xl lg:text-3xl font-bold mx-auto my-4'>Mon Titre</h2>
-                    <p className='text-center mx-auto'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Possimus quae soluta vitae nisi exercitationem nulla aliquam cupiditate ex delectus voluptatum, expedita, neque minima sequi laboriosam inventore!</p>
-
-                    <p className='mt-4'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magni, tempora.</p>
-                </div>
-
-            </section>
-            <section className='w-full bg-yellow-dragon  text-center my-10'>
-                <div className='p-1 lg:py-4 w-10/12 lg:w-3/6 mx-auto'>
-
-                    <h2 className='font-bold text-xl lg:text-3xl my-4'>Mon Titre</h2>
-                    <p className='font-bold text-xl'>Le defis du festival Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laudantium nulla repellendus culpa! Tenetur odit asperiores at voluptates quae. Neque, cumque.</p>
-                    <button type="button" className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-base px-6 py-3.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 my-6 ">Call To Action</button>
-                </div>
-
-            </section>
-
-            <section className='my-10'>
-                <div className='my-10'>
-                    <h2 className='text-center text-xl lg:text-5xl font-bold'>Nos conditions et recomendation</h2>
-                    <p className='text-center lg:w-8/12 w-full mx-auto my-10 p-2 lg:p-0'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam quisquam excepturi asperiores cupiditate. Numquam officiis voluptatibus dicta, odio eligendi, corrupti voluptate aliquam dolore repudiandae atque assumenda sint iure modi quos consequatur enim impedit quasi eos. Nemo veniam tempora earum reprehenderit deserunt perferendis pariatur nisi, placeat corporis! Repellat incidunt quasi quisquam!</p>
-                </div>
-                <div className='w-full lg:w-3/4 grid md:grid-cols-2 justify-items-center md:gap-15 px-4 lg:p-5 mx-auto'>
-
-
-                    <div className='text-center md:mx-8 lg:mx-0 px-3 lg:px-8 lg:w-9/12 '>
-                        <h2 className="text-2xl font-bold underline my-2">Pour la vidéo</h2>
-                        <div className='border border-black my-10 lg:px-10'>
-                            <h2 className='font-bold my-2'>Format</h2>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum placeat possimus velit alias fuga architecto!</p>
-                        </div>
-
-                        <div className='border border-black my-10'>
-
-                            <h2 className='font-bold my-2'>Format</h2>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum placeat possimus velit alias fuga architecto!</p>
-                        </div>
-
-                        <div className='border border-black my-10'>
-
-                            <h2 className='font-bold my-2'>Format</h2>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum placeat possimus velit alias fuga architecto!</p>
-                        </div>
-                        <div className='border border-black my-10'>
-
-                            <h2 className='font-bold my-2'>Format</h2>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum placeat possimus velit alias fuga architecto!</p>
-                        </div>
-                        <div className='border border-black my-10'>
-                            <h2 className='font-bold my-2'>Format</h2>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum placeat possimus velit alias fuga architecto!</p>
+            <section aria-labelledby="regles-title" className="wrap py-20 lg:py-32">
+                <div className="grid gap-10 lg:grid-cols-12 lg:gap-8">
+                    <div className="lg:col-span-4">
+                        <div className="lg:sticky lg:top-32">
+                            <h2 id="regles-title" className="display text-[clamp(2.25rem,4.5vw,4rem)]">
+                                Les conditions
+                            </h2>
+                            <p className="mt-5 max-w-sm text-base leading-relaxed text-mute">
+                                L'essentiel du règlement. Le règlement complet fait foi et doit être accepté lors de
+                                l'inscription.
+                            </p>
                         </div>
                     </div>
-
-
-
-                    <div className='text-center md:mx-8 lg:mx-0 px-3 lg:px-8 lg:w-9/12 '>
-
-                        <h2 className="text-2xl font-bold underline my-2">Pour le son</h2>
-                        <div className='border border-black my-10'>
-
-                            <h2 className='font-bold my-2'>Format</h2>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum placeat possimus velit alias fuga architecto!</p>
-                        </div>
-                        <div className='border border-black my-10'>
-
-                            <h2 className='font-bold my-2'>Format</h2>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum placeat possimus velit alias fuga architecto!</p>
-                        </div>
-                        <div className='border border-black my-10'>
-
-                            <h2 className='font-bold my-2'>Format</h2>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum placeat possimus velit alias fuga architecto!</p>
-                        </div>
-                        <div className='border border-black my-10'>
-
-                            <h2 className='font-bold my-2'>Format</h2>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum placeat possimus velit alias fuga architecto!</p>
-                        </div>
-                        <div className='border border-black my-10'>
-
-                            <h2 className='font-bold my-2'>Format</h2>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum placeat possimus velit alias fuga architecto!</p>
-                        </div>
-                    </div>
-
-
+                    <dl className="border-t border-line lg:col-span-8">
+                        {RULES.map(([term, text]) => (
+                            <div key={term} className="grid gap-2 border-b border-line py-6 sm:grid-cols-8 sm:gap-8 lg:py-8">
+                                <dt className="text-lg font-semibold text-paper sm:col-span-2">{term}</dt>
+                                <dd className="max-w-prose text-lg leading-relaxed text-mute sm:col-span-6">{text}</dd>
+                            </div>
+                        ))}
+                    </dl>
                 </div>
             </section>
 
-            <section className='w-full bg-yellow-dragon  my-10'>
-
-                <div className='w-full md:w-2/5 py-4 lg:px-0 px-12 text-center text-white mx-auto'>
-
-                    <h2 className="text-2xl font-bold underline my-2">Pour les sous-titres</h2>
-                    <div className='border border-black my-10'>
-
-                        <h2 className='font-bold my-2'>Format</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum placeat possimus velit alias fuga architecto!</p>
+            <section aria-labelledby="specs-title" className="on-paper bg-paper text-ink">
+                <div className="wrap py-20 lg:py-32">
+                    <div className="grid gap-6 lg:grid-cols-12 lg:items-end lg:gap-8">
+                        <h2 id="specs-title" className="display text-[clamp(2.25rem,4.5vw,4rem)] lg:col-span-7">
+                            Spécifications techniques
+                        </h2>
+                        <p className="text-base leading-relaxed text-mute-ink lg:col-span-5">
+                            Un fichier conforme passe directement en projection. Les valeurs définitives figurent dans le
+                            règlement officiel.
+                        </p>
                     </div>
-                    <div className='border border-black my-10'>
-
-                        <h2 className='font-bold my-2'>Format</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum placeat possimus velit alias fuga architecto!</p>
-                    </div>
-                    <div className='border border-black my-10'>
-
-                        <h2 className='font-bold my-2'>Format</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum placeat possimus velit alias fuga architecto!</p>
-                    </div>
-                    <div className='border border-black my-10'>
-
-                        <h2 className='font-bold my-2'>Format</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum placeat possimus velit alias fuga architecto!</p>
-                    </div>
-                    <div className='border border-black my-10'>
-
-                        <h2 className='font-bold my-2'>Format</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum placeat possimus velit alias fuga architecto!</p>
+                    <div className="mt-14 grid gap-12 md:grid-cols-3 md:gap-8">
+                        {SPECS.map((group) => (
+                            <section key={group.title} aria-labelledby={`spec-${group.title}`}>
+                                <h3 id={`spec-${group.title}`} className="border-b border-ink pb-4 text-2xl font-semibold">
+                                    {group.title}
+                                </h3>
+                                <dl>
+                                    {group.rows.map(([term, value]) => (
+                                        <div key={term} className="border-b border-paper-line py-4">
+                                            <dt className="text-sm text-mute-ink">{term}</dt>
+                                            <dd className="mt-1 text-base font-medium">{value}</dd>
+                                        </div>
+                                    ))}
+                                </dl>
+                            </section>
+                        ))}
                     </div>
                 </div>
             </section>
-            <section className='my-10 py-10'>
 
-                <div className='w-full lg:w-9/12 mx-auto flex flex-col justify-center items-center'>
-
-                    <h2 className='text-center text-xl lg:text-4xl font-bold mt-10 mb-5'>Un exemple pour vous aidé</h2>
-
-                    <iframe className='p-1 w-full aspect-video' src="https://www.youtube.com/embed/53rv31Bc5HM" title="Serge Crozon presentation" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    <p className='my-10'>Film Réalise par John Doe</p>
-
+            <section aria-labelledby="exemple-title" className="wrap py-20 lg:py-32">
+                <div className="grid gap-6 lg:grid-cols-12 lg:items-end lg:gap-8">
+                    <h2 id="exemple-title" className="display text-[clamp(2.25rem,4.5vw,4rem)] lg:col-span-7">
+                        Un exemple pour vous aider
+                    </h2>
+                    <p className="text-base leading-relaxed text-mute lg:col-span-5">
+                        Rythme, lisibilité des coups, travail de la caméra : regardez comment l'action se construit avant
+                        d'écrire la vôtre.
+                    </p>
                 </div>
-
-
+                <figure className="mt-10">
+                    <div className="aspect-video w-full bg-ink-raised">
+                        <iframe
+                            className="h-full w-full"
+                            src="https://www.youtube-nocookie.com/embed/53rv31Bc5HM"
+                            title="Présentation de Serge Crozon"
+                            loading="lazy"
+                            allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowFullScreen
+                        />
+                    </div>
+                    <figcaption className="mt-3 border-t border-line pt-3 text-sm text-mute">
+                        Présentation de Serge Crozon, sur YouTube.
+                    </figcaption>
+                </figure>
             </section>
-        </main >
+
+            <section aria-labelledby="pret-title" className="bg-signal text-white">
+                <div className="wrap flex flex-col gap-8 py-16 lg:flex-row lg:items-end lg:justify-between lg:py-24">
+                    <h2 id="pret-title" className="display text-[clamp(3rem,7vw,6rem)]">
+                        Prêt à tourner ?
+                    </h2>
+                    <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-8">
+                        <Link to="/inscription" className="btn-dark">
+                            S'inscrire au concours
+                            <ArrowRight />
+                        </Link>
+                        <Link to="/faq" className="link-arrow text-white hover:text-white/80">
+                            Questions fréquentes
+                        </Link>
+                    </div>
+                </div>
+            </section>
+        </main>
     )
 }
