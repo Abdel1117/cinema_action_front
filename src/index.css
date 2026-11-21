@@ -191,6 +191,22 @@
     animation-delay: var(--d, 600ms);
   }
 
+  .cookie-in {
+    animation: cookie-in 500ms var(--ease-out) both;
+    animation-delay: 900ms;
+  }
+
+  @keyframes cookie-in {
+    from {
+      opacity: 0;
+      transform: translateY(24px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
   @keyframes rise {
     from {
       transform: translateY(105%);

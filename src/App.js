@@ -10,6 +10,8 @@ import About from './Page/A_Propos';
 import Connexion from './Page/Connexion';
 import A_VENIR from './Page/A_Venir';
 import Inscription from './Page/Inscription';
+import { ConsentProvider } from './Compenants/Cookies/ConsentContext';
+import CookieBanner from './Compenants/Cookies/CookieBanner';
 
 const TITLES = {
   '/': 'Ciné Action Festival · Courts métrages d\'action',
@@ -51,8 +53,9 @@ function NotFound() {
 
 function App() {
   return (
-    <>
+    <ConsentProvider>
       <RouteEffects />
+      <CookieBanner />
       <Header />
       <Routes>
         <Route path="/" element={<Accueil />} />
@@ -77,7 +80,7 @@ function App() {
         <Route path='*' element={<NotFound />} />
       </Routes>
       <Footer />
-    </>
+    </ConsentProvider>
   );
 }
 

@@ -2,6 +2,8 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import PageHeader from '../../Compenants/PageHeader'
 import Provisional from '../../Compenants/Provisional'
+import YouTubeEmbed from '../../Compenants/Cookies/YouTubeEmbed'
+import still from '../../assets/stills/reel-116.jpg'
 import { ArrowRight } from '../../Compenants/Icons'
 import { FESTIVAL } from '../../assets/Data/festival'
 
@@ -132,16 +134,7 @@ export default function Participer() {
                     </p>
                 </div>
                 <figure className="mt-10">
-                    <div className="aspect-video w-full bg-ink-raised">
-                        <iframe
-                            className="h-full w-full"
-                            src="https://www.youtube-nocookie.com/embed/53rv31Bc5HM"
-                            title="Présentation de Serge Crozon"
-                            loading="lazy"
-                            allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowFullScreen
-                        />
-                    </div>
+                    <YouTubeEmbed id="53rv31Bc5HM" title="Présentation de Serge Crozon" poster={still} />
                     <figcaption className="mt-3 border-t border-line pt-3 text-sm text-mute">
                         Présentation de Serge Crozon, sur YouTube.
                     </figcaption>

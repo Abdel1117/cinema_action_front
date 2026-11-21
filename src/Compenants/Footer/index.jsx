@@ -2,9 +2,11 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { FESTIVAL, NAV_LINKS } from '../../assets/Data/festival'
 import { SocialIcon } from '../Icons'
+import { useConsent } from '../Cookies/ConsentContext'
 
 export default function Footer() {
     const year = new Date().getFullYear()
+    const { openSettings } = useConsent()
 
     return (
         <footer className="border-t border-line bg-ink">
@@ -69,6 +71,11 @@ export default function Footer() {
                         </li>
                         <li>
                             <Link to="/confidentialite" className="transition-colors duration-150 hover:text-paper">Politique de confidentialité</Link>
+                        </li>
+                        <li>
+                            <button type="button" onClick={openSettings} className="transition-colors duration-150 hover:text-paper">
+                                Gestion des cookies
+                            </button>
                         </li>
                         <li>
                             <Link to="/a_venir" className="transition-colors duration-150 hover:text-paper">Contact</Link>
