@@ -57,7 +57,7 @@
   }
 
   html {
-    scrollbar-color: #3d3d3d #0a0a0a;
+    scrollbar-color: #6b6b6b #0a0a0a;
   }
 
   ::-webkit-scrollbar {
@@ -70,12 +70,12 @@
   }
 
   ::-webkit-scrollbar-thumb {
-    background: #3d3d3d;
+    background: #6b6b6b;
     border: 3px solid #0a0a0a;
   }
 
   ::-webkit-scrollbar-thumb:hover {
-    background: #5a5a5a;
+    background: #8a8a8a;
   }
 
   input[type="date"]::-webkit-calendar-picker-indicator {
@@ -92,7 +92,8 @@
 
   .display {
     @apply font-display font-normal uppercase;
-    line-height: 0.96;
+    /* Anton's accented capitals rise to 1.11em: below ~1.15 an É on a second line strikes the line above. */
+    line-height: 1.15;
     letter-spacing: -0.005em;
   }
 

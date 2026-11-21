@@ -64,15 +64,15 @@ function App() {
         <Route path='/a_venir' element={<A_VENIR />} />
         <Route
           path='/mentions-legales'
-          element={<A_VENIR title="Mentions légales" lead="Cette page est en cours de rédaction. Pour toute question, retrouvez le festival sur les réseaux." />}
+          element={<A_VENIR title="Mentions légales" lead="Cette page est en cours de rédaction." />}
         />
         <Route
           path='/confidentialite'
-          element={<A_VENIR title="Confidentialité" lead="Notre politique de confidentialité est en cours de rédaction. Pour toute question sur vos données, contactez-nous sur les réseaux." />}
+          element={<A_VENIR title="Confidentialité" lead="Notre politique de confidentialité est en cours de rédaction." />}
         />
         <Route
           path='/mot-de-passe-oublie'
-          element={<A_VENIR title="Mot de passe oublié" lead="La réinitialisation en ligne arrive bientôt. En attendant, écrivez-nous sur les réseaux pour retrouver l'accès à votre compte." />}
+          element={<A_VENIR title="Mot de passe oublié" lead="La réinitialisation du mot de passe en ligne arrive bientôt." />}
         />
         <Route path='*' element={<NotFound />} />
       </Routes>

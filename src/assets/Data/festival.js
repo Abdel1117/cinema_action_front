@@ -3,16 +3,20 @@
 
 export const FESTIVAL = {
     name: "Ciné Action Festival",
+    // Affiche les mentions « provisoire » sur le site. Passer à false une fois le règlement et les dates validés.
+    provisional: true,
+    // À confirmer : dates et lieu de la prochaine édition (null = « à annoncer »).
+    edition: { dates: null, venue: null },
     // À confirmer : la page À propos dit 2 min 30, l'ancienne liste d'étapes disait 2 min 20.
     filmDuration: "2 min 30",
     // À confirmer : date d'ouverture des inscriptions (le compte à rebours s'y réfère).
     registrationOpens: "2027-02-01T10:00:00+01:00",
-    // À confirmer : liens des réseaux sociaux.
+    // À confirmer : liens des réseaux sociaux (null = « bientôt », affiché sans lien).
     social: [
-        { id: "instagram", label: "Instagram", href: "#" },
-        { id: "youtube", label: "YouTube", href: "#" },
-        { id: "facebook", label: "Facebook", href: "#" },
-        { id: "x", label: "X (Twitter)", href: "#" },
+        { id: "instagram", label: "Instagram", href: null },
+        { id: "youtube", label: "YouTube", href: null },
+        { id: "facebook", label: "Facebook", href: null },
+        { id: "x", label: "X (Twitter)", href: null },
     ],
 };
 

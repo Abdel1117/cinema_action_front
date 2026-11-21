@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { Field, Fieldset, SelectChevron } from '../../Compenants/Form'
-import { ArrowRight, Check } from '../../Compenants/Icons'
+import { ArrowRight, Check, User } from '../../Compenants/Icons'
 
 const INITIAL = {
     email: '',
@@ -222,9 +222,13 @@ export default function Inscription() {
                                             {picture ? (
                                                 <img src={picture.url} alt="Aperçu de votre profil" className="h-full w-full object-cover" />
                                             ) : (
-                                                <span className="font-display text-2xl uppercase text-mute-soft" aria-hidden="true">
-                                                    {(form.firstName[0] || '') + (form.lastName[0] || '') || '?'}
-                                                </span>
+                                                form.firstName || form.lastName ? (
+                                                    <span className="font-display text-2xl uppercase text-mute-soft" aria-hidden="true">
+                                                        {(form.firstName[0] || '') + (form.lastName[0] || '')}
+                                                    </span>
+                                                ) : (
+                                                    <User className="h-8 w-8 text-mute-soft" />
+                                                )
                                             )}
                                         </span>
                                         <label className="btn-outline cursor-pointer px-5 py-3 text-sm focus-within:outline focus-within:outline-2 focus-within:outline-offset-2 focus-within:outline-paper">

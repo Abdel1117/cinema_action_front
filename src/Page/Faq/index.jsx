@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import PageHeader from '../../Compenants/PageHeader'
+import Provisional from '../../Compenants/Provisional'
 import Question from '../../Compenants/Question/Question'
 import { ArrowRight } from '../../Compenants/Icons'
 import { QuestionGroups } from '../../assets/Data/QuestionList'
@@ -11,7 +12,9 @@ export default function Faq() {
             <PageHeader
                 title="Questions fréquentes"
                 lead="Le concours, le film, l'inscription : les réponses aux questions qu'on nous pose le plus souvent."
-            />
+            >
+                <Provisional className="mt-6">Réponses provisoires, en cours de validation par l'organisation.</Provisional>
+            </PageHeader>
 
             <div className="wrap grid gap-12 py-16 lg:grid-cols-12 lg:gap-8 lg:py-24">
                 <nav aria-label="Rubriques" className="lg:col-span-3">
@@ -44,10 +47,11 @@ export default function Faq() {
                     <div className="border border-line p-8 lg:p-10">
                         <h2 className="text-2xl font-semibold text-paper">Vous ne trouvez pas votre réponse ?</h2>
                         <p className="mt-3 max-w-prose text-base leading-relaxed text-mute">
-                            Écrivez-nous ou suivez le festival sur les réseaux pour poser votre question sur le concours.
+                            Le formulaire de contact arrive bientôt. En attendant, les conditions de participation
+                            détaillent la durée, le thème, les formats et la sécurité.
                         </p>
-                        <Link to="/a_venir" className="link-arrow mt-6 text-paper hover:text-mute">
-                            Nous contacter
+                        <Link to="/participer" className="link-arrow mt-6 text-paper hover:text-mute">
+                            Conditions de participation
                             <ArrowRight className="h-4 w-4" />
                         </Link>
                     </div>

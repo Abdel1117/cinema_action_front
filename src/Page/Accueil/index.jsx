@@ -7,6 +7,8 @@ import stillForum from '../../assets/stills/reel-108.jpg'
 import stillExpo from '../../assets/stills/reel-48.jpg'
 import stillDemo from '../../assets/stills/reel-116.jpg'
 import stillGala from '../../assets/stills/reel-64.jpg'
+import stillPoster from '../../assets/stills/reel-20.jpg'
+import reel from '../../assets/video/Serge_Crozon_presentation.mp4'
 
 const STRAND_IMAGES = [stillForum, stillExpo, stillDemo, stillGala]
 
@@ -87,11 +89,11 @@ export default function Accueil() {
                         ))}
                     </dl>
 
-                    <h3 className="mt-20 text-sm font-semibold">Les cinq étapes</h3>
+                    <h3 className="mt-20 text-2xl font-semibold">Les cinq étapes</h3>
                     <ol className="mt-6 grid gap-x-8 gap-y-10 sm:grid-cols-2 lg:grid-cols-5">
                         {STEPS.map((step, i) => (
                             <li key={step.title} className="border-t border-ink pt-5">
-                                <span className="font-display text-[3.5rem] leading-none text-signal">{i + 1}</span>
+                                <span className="font-display text-[3.5rem] leading-none text-ink">{i + 1}</span>
                                 <h4 className="mt-4 text-xl font-semibold">{step.title}</h4>
                                 <p className="mt-2 text-base leading-relaxed text-mute-ink">{step.text}</p>
                             </li>
@@ -132,22 +134,44 @@ export default function Accueil() {
                 </ul>
             </section>
 
-            <section aria-labelledby="gala-title" className="bg-signal text-white">
-                <div className="wrap grid gap-10 py-20 lg:grid-cols-12 lg:items-end lg:gap-8 lg:py-28">
+            <section aria-labelledby="reel-title" className="border-t border-line">
+                <div className="wrap py-24 lg:py-32">
+                    <div className="grid gap-6 lg:grid-cols-12 lg:items-end lg:gap-8">
+                        <h2 id="reel-title" className="display text-[clamp(2.25rem,4.5vw,4rem)] lg:col-span-7">
+                            Le showreel
+                        </h2>
+                        <p className="text-base leading-relaxed text-mute lg:col-span-5">
+                            Combats, chutes, poursuites : le travail de cascade de Serge Crozon, en version intégrale et avec
+                            le son.
+                        </p>
+                    </div>
+                    <figure className="mt-10">
+                        <video className="aspect-video w-full bg-ink-raised" src={reel} poster={stillPoster} controls preload="none" playsInline>
+                            Votre navigateur ne peut pas lire cette vidéo.
+                        </video>
+                        <figcaption className="mt-3 border-t border-line pt-3 text-sm text-mute">
+                            Showreel de Serge Crozon, 2 min 30.
+                        </figcaption>
+                    </figure>
+                </div>
+            </section>
+
+            <section aria-labelledby="gala-title" className="border-t border-line">
+                <div className="wrap grid gap-10 py-24 lg:grid-cols-12 lg:items-end lg:gap-8 lg:py-32">
                     <h2 id="gala-title" className="display text-[clamp(3rem,7.5vw,6.5rem)] lg:col-span-7">
                         Votre film sur grand écran
                     </h2>
                     <div className="lg:col-span-5">
-                        <p className="text-lg leading-relaxed text-white">
+                        <p className="text-lg leading-relaxed text-mute">
                             Les courts métrages finalistes sont projetés en compétition lors de la soirée de gala, en clôture
                             du festival.
                         </p>
                         <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-8">
-                            <Link to="/inscription" className="btn-dark">
-                                Créer mon compte
+                            <Link to="/inscription" className="btn-primary">
+                                S'inscrire au concours
                                 <ArrowRight />
                             </Link>
-                            <Link to="/faq" className="link-arrow text-white hover:text-white/80">
+                            <Link to="/faq" className="link-arrow text-paper hover:text-mute">
                                 Questions fréquentes
                             </Link>
                         </div>

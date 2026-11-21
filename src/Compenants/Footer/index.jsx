@@ -10,7 +10,7 @@ export default function Footer() {
         <footer className="border-t border-line bg-ink">
             <div className="wrap grid gap-14 py-16 lg:grid-cols-12 lg:gap-8 lg:py-24">
                 <div className="lg:col-span-6">
-                    <p className="display text-[clamp(3rem,7vw,6rem)] text-paper">
+                    <p className="display text-[clamp(3rem,7vw,6rem)] leading-[0.95] text-paper">
                         Ciné Action
                         <br />
                         <span className="text-mute-soft">Festival</span>
@@ -38,13 +38,22 @@ export default function Footer() {
                     <ul className="mt-5 space-y-3">
                         {FESTIVAL.social.map((s) => (
                             <li key={s.id}>
-                                <a
-                                    href={s.href}
-                                    className="inline-flex items-center gap-3 text-base text-mute transition-colors duration-150 hover:text-paper"
-                                >
-                                    <SocialIcon id={s.id} className="h-4 w-4" />
-                                    {s.label}
-                                </a>
+                                {s.href ? (
+                                    <a
+                                        href={s.href}
+                                        className="inline-flex items-center gap-3 text-base text-mute transition-colors duration-150 hover:text-paper"
+                                    >
+                                        <SocialIcon id={s.id} className="h-4 w-4" />
+                                        {s.label}
+                                    </a>
+                                ) : (
+                                    <span className="inline-flex items-center gap-3 text-base text-mute-soft">
+                                        <SocialIcon id={s.id} className="h-4 w-4" />
+                                        <span>
+                                            {s.label} <span className="text-sm">· bientôt</span>
+                                        </span>
+                                    </span>
+                                )}
                             </li>
                         ))}
                     </ul>

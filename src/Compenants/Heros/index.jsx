@@ -4,6 +4,7 @@ import showreel from '../../assets/video/showreel-loop.mp4'
 import poster from '../../assets/stills/reel-20.jpg'
 import { FESTIVAL } from '../../assets/Data/festival'
 import TimeStamp from '../TimeStamp'
+import { editionLabel } from '../Provisional'
 import { ArrowRight, Pause, Play } from '../Icons'
 
 export default function Heros() {
@@ -77,17 +78,24 @@ export default function Heros() {
                     <TimeStamp className="fade-up lg:col-span-4" />
                 </div>
 
-                <div className="mt-12 flex items-center justify-between gap-6 border-t border-paper/20 pt-4 text-sm text-mute">
-                    <p>Images : showreel de Serge Crozon</p>
-                    <button
-                        type="button"
-                        onClick={toggle}
-                        className="-mr-2 inline-flex h-10 items-center gap-2 px-2 font-medium text-paper/85 transition-colors duration-150 hover:text-paper"
-                    >
-                        {playing ? <Pause /> : <Play />}
-                        {playing ? 'Pause' : 'Lecture'}
-                        <span className="sr-only"> de la vidéo d'arrière-plan</span>
-                    </button>
+                <div className="mt-12 flex flex-col gap-1 border-t border-paper/20 pt-4 text-sm text-mute md:flex-row md:items-center md:justify-between md:gap-6">
+                    <p className="py-2 md:py-0">
+                        <span className="font-semibold text-paper">Prochaine édition</span>
+                        <span className="mx-2" aria-hidden="true">·</span>
+                        {editionLabel()}
+                    </p>
+                    <div className="flex items-center justify-between gap-6 md:gap-10">
+                        <p>Images : showreel de Serge Crozon</p>
+                        <button
+                            type="button"
+                            onClick={toggle}
+                            className="-mr-2 inline-flex h-10 items-center gap-2 px-2 font-medium text-paper/85 transition-colors duration-150 hover:text-paper"
+                        >
+                            {playing ? <Pause /> : <Play />}
+                            {playing ? 'Pause' : 'Lecture'}
+                            <span className="sr-only"> de la vidéo d'arrière-plan</span>
+                        </button>
+                    </div>
                 </div>
             </div>
         </section>

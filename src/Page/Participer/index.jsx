@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import PageHeader from '../../Compenants/PageHeader'
+import Provisional from '../../Compenants/Provisional'
 import { ArrowRight } from '../../Compenants/Icons'
 import { FESTIVAL } from '../../assets/Data/festival'
 
@@ -72,6 +73,7 @@ export default function Participer() {
                                 L'essentiel du règlement. Le règlement complet fait foi et doit être accepté lors de
                                 l'inscription.
                             </p>
+                            <Provisional className="mt-6">Règlement provisoire, en cours de validation par l'organisation.</Provisional>
                         </div>
                     </div>
                     <dl className="border-t border-line lg:col-span-8">
@@ -91,10 +93,13 @@ export default function Participer() {
                         <h2 id="specs-title" className="display text-[clamp(2.25rem,4.5vw,4rem)] lg:col-span-7">
                             Spécifications techniques
                         </h2>
-                        <p className="text-base leading-relaxed text-mute-ink lg:col-span-5">
-                            Un fichier conforme passe directement en projection. Les valeurs définitives figurent dans le
-                            règlement officiel.
-                        </p>
+                        <div className="lg:col-span-5">
+                            <p className="text-base leading-relaxed text-mute-ink">
+                                Un fichier conforme passe directement en projection. Les valeurs définitives figurent dans
+                                le règlement officiel.
+                            </p>
+                            <Provisional tone="light" className="mt-4">Spécifications provisoires, en cours de validation.</Provisional>
+                        </div>
                     </div>
                     <div className="mt-14 grid gap-12 md:grid-cols-3 md:gap-8">
                         {SPECS.map((group) => (
@@ -143,17 +148,17 @@ export default function Participer() {
                 </figure>
             </section>
 
-            <section aria-labelledby="pret-title" className="bg-signal text-white">
-                <div className="wrap flex flex-col gap-8 py-16 lg:flex-row lg:items-end lg:justify-between lg:py-24">
+            <section aria-labelledby="pret-title" className="border-t border-line">
+                <div className="wrap flex flex-col gap-8 py-20 lg:flex-row lg:items-end lg:justify-between lg:py-28">
                     <h2 id="pret-title" className="display text-[clamp(3rem,7vw,6rem)]">
                         Prêt à tourner ?
                     </h2>
                     <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-8">
-                        <Link to="/inscription" className="btn-dark">
+                        <Link to="/inscription" className="btn-primary">
                             S'inscrire au concours
                             <ArrowRight />
                         </Link>
-                        <Link to="/faq" className="link-arrow text-white hover:text-white/80">
+                        <Link to="/faq" className="link-arrow text-paper hover:text-mute">
                             Questions fréquentes
                         </Link>
                     </div>

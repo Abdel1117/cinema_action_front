@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import PageHeader from '../../Compenants/PageHeader'
+import { editionLabel } from '../../Compenants/Provisional'
 import { ArrowRight } from '../../Compenants/Icons'
 import { FESTIVAL, STRANDS } from '../../assets/Data/festival'
 import reel from '../../assets/video/Serge_Crozon_presentation.mp4'
@@ -14,7 +15,12 @@ export default function About() {
             <PageHeader
                 title="Le festival"
                 lead="Une semaine entièrement consacrée au cinéma d'action, avec les arts martiaux au cœur, et un concours de courts métrages ouvert à toutes et à tous."
-            />
+            >
+                <dl className="mt-8 border-t border-line pt-4 text-base">
+                    <dt className="font-semibold text-paper">Prochaine édition</dt>
+                    <dd className="mt-1 text-mute">{editionLabel()}</dd>
+                </dl>
+            </PageHeader>
 
             <section aria-labelledby="quoi-title" className="wrap py-20 lg:py-32">
                 <div className="grid gap-14 lg:grid-cols-12 lg:gap-8">

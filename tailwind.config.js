@@ -10,7 +10,7 @@ module.exports = {
         },
         line: {
           DEFAULT: "#2a2a2a",
-          strong: "#3d3d3d",
+          strong: "#6b6b6b",
         },
         paper: {
           DEFAULT: "#f5f5f5",

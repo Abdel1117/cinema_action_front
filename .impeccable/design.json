@@ -1,0 +1,480 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-21T17:22:15Z",
+  "title": "Design System: Ciné Action Festival",
+  "extensions": {
+    "colorMeta": {
+      "signal": {
+        "role": "primary",
+        "displayName": "Signal Red",
+        "canonical": "#d71e28",
+        "tonalRamp": [
+          "#1f0001",
+          "#4c0105",
+          "#80010e",
+          "#b80219",
+          "#e63637",
+          "#feb3ab",
+          "#ff736a",
+          "#ffe9e6"
+        ]
+      },
+      "signal-hover": {
+        "role": "primary",
+        "displayName": "Deep Signal",
+        "canonical": "#b5141d",
+        "tonalRamp": [
+          "#1f0001",
+          "#4d0105",
+          "#80010d",
+          "#b4171e",
+          "#dc4641",
+          "#fd756b",
+          "#feb3ab",
+          "#ffe9e6"
+        ]
+      },
+      "signal-text": {
+        "role": "primary",
+        "displayName": "Lit Signal",
+        "canonical": "#ff5a5f",
+        "tonalRamp": [
+          "#1f0002",
+          "#4c010a",
+          "#800118",
+          "#b70227",
+          "#e03e48",
+          "#fe7272",
+          "#ffb2ae",
+          "#ffe9e7"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Screening-Room Black",
+        "canonical": "#0a0a0a",
+        "tonalRamp": [
+          "#0a0a0a",
+          "#2a2a2a",
+          "#525252",
+          "#6b6b6b",
+          "#8a8a8a",
+          "#a3a3a3",
+          "#d4d4d4",
+          "#f5f5f5"
+        ]
+      },
+      "ink-raised": {
+        "role": "neutral",
+        "displayName": "Raised Black",
+        "canonical": "#141414",
+        "tonalRamp": [
+          "#0a0a0a",
+          "#2a2a2a",
+          "#525252",
+          "#6b6b6b",
+          "#8a8a8a",
+          "#a3a3a3",
+          "#d4d4d4",
+          "#f5f5f5"
+        ]
+      },
+      "line": {
+        "role": "neutral",
+        "displayName": "Hairline",
+        "canonical": "#2a2a2a",
+        "tonalRamp": [
+          "#0a0a0a",
+          "#2a2a2a",
+          "#525252",
+          "#6b6b6b",
+          "#8a8a8a",
+          "#a3a3a3",
+          "#d4d4d4",
+          "#f5f5f5"
+        ]
+      },
+      "line-strong": {
+        "role": "neutral",
+        "displayName": "Control Hairline",
+        "canonical": "#6b6b6b",
+        "tonalRamp": [
+          "#0a0a0a",
+          "#2a2a2a",
+          "#525252",
+          "#6b6b6b",
+          "#8a8a8a",
+          "#a3a3a3",
+          "#d4d4d4",
+          "#f5f5f5"
+        ]
+      },
+      "paper": {
+        "role": "neutral",
+        "displayName": "Programme Paper",
+        "canonical": "#f5f5f5",
+        "tonalRamp": [
+          "#0a0a0a",
+          "#2a2a2a",
+          "#525252",
+          "#6b6b6b",
+          "#8a8a8a",
+          "#a3a3a3",
+          "#d4d4d4",
+          "#f5f5f5"
+        ]
+      },
+      "paper-line": {
+        "role": "neutral",
+        "displayName": "Paper Rule",
+        "canonical": "#d4d4d4",
+        "tonalRamp": [
+          "#0a0a0a",
+          "#2a2a2a",
+          "#525252",
+          "#6b6b6b",
+          "#8a8a8a",
+          "#a3a3a3",
+          "#d4d4d4",
+          "#f5f5f5"
+        ]
+      },
+      "mute": {
+        "role": "neutral",
+        "displayName": "Credit Grey",
+        "canonical": "#a3a3a3",
+        "tonalRamp": [
+          "#0a0a0a",
+          "#2a2a2a",
+          "#525252",
+          "#6b6b6b",
+          "#8a8a8a",
+          "#a3a3a3",
+          "#d4d4d4",
+          "#f5f5f5"
+        ]
+      },
+      "mute-soft": {
+        "role": "neutral",
+        "displayName": "Dim Grey",
+        "canonical": "#8a8a8a",
+        "tonalRamp": [
+          "#0a0a0a",
+          "#2a2a2a",
+          "#525252",
+          "#6b6b6b",
+          "#8a8a8a",
+          "#a3a3a3",
+          "#d4d4d4",
+          "#f5f5f5"
+        ]
+      },
+      "mute-ink": {
+        "role": "neutral",
+        "displayName": "Graphite",
+        "canonical": "#525252",
+        "tonalRamp": [
+          "#0a0a0a",
+          "#2a2a2a",
+          "#525252",
+          "#6b6b6b",
+          "#8a8a8a",
+          "#a3a3a3",
+          "#d4d4d4",
+          "#f5f5f5"
+        ]
+      },
+      "white": {
+        "role": "neutral",
+        "displayName": "White",
+        "canonical": "#ffffff",
+        "tonalRamp": [
+          "#0a0a0a",
+          "#2a2a2a",
+          "#525252",
+          "#6b6b6b",
+          "#8a8a8a",
+          "#a3a3a3",
+          "#d4d4d4",
+          "#f5f5f5"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display-hero": {
+        "displayName": "Display Hero",
+        "purpose": "The two-line festival title over the hero reel only. Fluid: clamp(4rem, 13vw, 11.875rem). Uppercase."
+      },
+      "display": {
+        "displayName": "Display",
+        "purpose": "Page titles in the page header. Fluid: clamp(3.5rem, 10vw, 8.5rem). Also paper-band titles, closing calls to action, form-page titles. Uppercase."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Standard section heading. Fluid: clamp(2.25rem, 4.5vw, 4rem). Uppercase."
+      },
+      "numeral": {
+        "displayName": "Numeral",
+        "purpose": "Countdown digits, 2rem rising to 2.75rem from 640px, tabular figures; step numbers at 3.5rem."
+      },
+      "logotype": {
+        "displayName": "Logotype",
+        "purpose": "Header and mobile-menu wordmark, uppercase, 'Festival' in Credit Grey."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Sub-section titles, spec group heads, the crafts statement. Legends and step titles at 1.25rem; 1.875rem is Archivo's ceiling."
+      },
+      "lead": {
+        "displayName": "Lead",
+        "purpose": "Paragraph beside a headline; 1.25rem in page headers from 640px."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Running text at a 40rem measure."
+      },
+      "nav": {
+        "displayName": "Nav",
+        "purpose": "Header links (500) and the header call to action (600)."
+      },
+      "button": {
+        "displayName": "Button",
+        "purpose": "Every button label, sentence case."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Field labels, footer column heads, the countdown heading."
+      },
+      "caption": {
+        "displayName": "Caption",
+        "purpose": "Captions, credits, definition terms, hints, errors (500), provisional notes."
+      }
+    },
+    "shadows": [],
+    "motion": [
+      {
+        "name": "ease-out-expo",
+        "value": "cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "The only easing curve: the hero entrance and every reveal."
+      },
+      {
+        "name": "duration-feedback",
+        "value": "150ms",
+        "purpose": "Colour changes on buttons, links, nav, fields and the checkbox."
+      },
+      {
+        "name": "duration-toggle",
+        "value": "200ms",
+        "purpose": "The FAQ toggle box filling red or returning to outline."
+      },
+      {
+        "name": "duration-reveal",
+        "value": "300ms",
+        "purpose": "Accordion panel (grid rows 0fr to 1fr), plus-to-cross rotation, contact-list arrow nudge."
+      },
+      {
+        "name": "hero-rise",
+        "value": "1100ms translateY(105%) to 0, 110ms stagger, 150ms start",
+        "purpose": "Each hero title line rising from its clipped line box. The one authored entrance."
+      },
+      {
+        "name": "hero-fade-up",
+        "value": "900ms opacity 0 to 1, translateY(14px) to 0, at 550ms / 600ms / 700ms",
+        "purpose": "Hero lead, countdown and actions following the title rise, as the tail of the same entrance."
+      },
+      {
+        "name": "reduced-motion",
+        "value": "prefers-reduced-motion: no-preference gate",
+        "purpose": "Entrance animations run only without a reduced-motion request; the hero video does not autoplay with one. Content is visible by default."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "sm",
+        "value": "640px"
+      },
+      {
+        "name": "md",
+        "value": "768px"
+      },
+      {
+        "name": "lg",
+        "value": "1024px"
+      },
+      {
+        "name": "xl",
+        "value": "1280px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Signal Red slab for the action that moves a candidate forward. Never more than the primary action and live states use red.",
+      "html": "<div class=\"ds-stage-ink-a\"><a class=\"ds-btn-primary\" href=\"#\">S'inscrire au concours <svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M4 12h15M13 6l6 6-6 6\"/></svg></a></div>",
+      "css": ".ds-stage-ink-a { background: #0a0a0a; padding: 32px; } .ds-btn-primary { display: inline-flex; align-items: center; justify-content: center; gap: 12px; min-height: 52px; padding: 16px 28px; font-family: 'Archivo Variable', system-ui, -apple-system, 'Segoe UI', sans-serif; font-size: 16px; font-weight: 600; line-height: 1.5; text-decoration: none; border-radius: 0; cursor: pointer; transition: background-color 150ms cubic-bezier(0.16, 1, 0.3, 1), color 150ms cubic-bezier(0.16, 1, 0.3, 1); background: #d71e28; color: #ffffff; border: 0; } .ds-btn-primary svg { width: 20px; height: 20px; fill: none; stroke: currentColor; stroke-width: 1.75; stroke-linecap: square; stroke-linejoin: miter; } .ds-btn-primary:hover { background: #b5141d; } .ds-btn-primary:focus-visible { outline: 2px solid #f5f5f5; outline-offset: 3px; }"
+    },
+    {
+      "name": "Outline Button",
+      "kind": "button",
+      "refersTo": "button-outline",
+      "description": "Paper outline on ink; the partner to a primary button on dark ground. Fills paper on hover.",
+      "html": "<div class=\"ds-stage-ink-b\"><a class=\"ds-btn-outline\" href=\"#\">Découvrir le festival</a></div>",
+      "css": ".ds-stage-ink-b { background: #0a0a0a; padding: 32px; } .ds-btn-outline { display: inline-flex; align-items: center; justify-content: center; gap: 12px; min-height: 52px; padding: 16px 28px; font-family: 'Archivo Variable', system-ui, -apple-system, 'Segoe UI', sans-serif; font-size: 16px; font-weight: 600; line-height: 1.5; text-decoration: none; border-radius: 0; cursor: pointer; transition: background-color 150ms cubic-bezier(0.16, 1, 0.3, 1), color 150ms cubic-bezier(0.16, 1, 0.3, 1); background: transparent; color: #f5f5f5; border: 1px solid #f5f5f5; } .ds-btn-outline svg { width: 20px; height: 20px; fill: none; stroke: currentColor; stroke-width: 1.75; stroke-linecap: square; stroke-linejoin: miter; } .ds-btn-outline:hover { background: #f5f5f5; color: #0a0a0a; } .ds-btn-outline:focus-visible { outline: 2px solid #f5f5f5; outline-offset: 3px; }"
+    },
+    {
+      "name": "Dark Button (on paper)",
+      "kind": "button",
+      "refersTo": "button-dark",
+      "description": "Ink slab used inside paper bands when the action is secondary to the red primary.",
+      "html": "<div class=\"ds-stage-paper-a\"><a class=\"ds-btn-dark\" href=\"#\">Consulter la FAQ <svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M4 12h15M13 6l6 6-6 6\"/></svg></a></div>",
+      "css": ".ds-stage-paper-a { background: #f5f5f5; padding: 32px; } .ds-btn-dark { display: inline-flex; align-items: center; justify-content: center; gap: 12px; min-height: 52px; padding: 16px 28px; font-family: 'Archivo Variable', system-ui, -apple-system, 'Segoe UI', sans-serif; font-size: 16px; font-weight: 600; line-height: 1.5; text-decoration: none; border-radius: 0; cursor: pointer; transition: background-color 150ms cubic-bezier(0.16, 1, 0.3, 1), color 150ms cubic-bezier(0.16, 1, 0.3, 1); background: #0a0a0a; color: #f5f5f5; border: 0; } .ds-btn-dark svg { width: 20px; height: 20px; fill: none; stroke: currentColor; stroke-width: 1.75; stroke-linecap: square; stroke-linejoin: miter; } .ds-btn-dark:hover { background: #141414; } .ds-btn-dark:focus-visible { outline: 2px solid #0a0a0a; outline-offset: 3px; }"
+    },
+    {
+      "name": "Outline Dark Button (on paper)",
+      "kind": "button",
+      "refersTo": "button-outline-dark",
+      "description": "Ink outline on paper; fills ink on hover. The partner button inside paper bands.",
+      "html": "<div class=\"ds-stage-paper-b\"><a class=\"ds-btn-outline-dark\" href=\"#\">Lire les conditions de participation</a></div>",
+      "css": ".ds-stage-paper-b { background: #f5f5f5; padding: 32px; } .ds-btn-outline-dark { display: inline-flex; align-items: center; justify-content: center; gap: 12px; min-height: 52px; padding: 16px 28px; font-family: 'Archivo Variable', system-ui, -apple-system, 'Segoe UI', sans-serif; font-size: 16px; font-weight: 600; line-height: 1.5; text-decoration: none; border-radius: 0; cursor: pointer; transition: background-color 150ms cubic-bezier(0.16, 1, 0.3, 1), color 150ms cubic-bezier(0.16, 1, 0.3, 1); background: transparent; color: #0a0a0a; border: 1px solid #0a0a0a; } .ds-btn-outline-dark svg { width: 20px; height: 20px; fill: none; stroke: currentColor; stroke-width: 1.75; stroke-linecap: square; stroke-linejoin: miter; } .ds-btn-outline-dark:hover { background: #0a0a0a; color: #f5f5f5; } .ds-btn-outline-dark:focus-visible { outline: 2px solid #0a0a0a; outline-offset: 3px; }"
+    },
+    {
+      "name": "Text Field",
+      "kind": "input",
+      "refersTo": "input-field",
+      "description": "Raised Black field with a Control Hairline border, label above, hint or Lit Signal error below. Focus shifts the border to paper.",
+      "html": "<div class=\"ds-field-stage\"><div class=\"ds-field-group\"><label class=\"ds-field-label\" for=\"ds-f1\">Mot de passe</label><input class=\"ds-field\" id=\"ds-f1\" type=\"text\" placeholder=\"\" /><p class=\"ds-field-hint\">8 caractères minimum.</p></div><div class=\"ds-field-group\"><label class=\"ds-field-label\" for=\"ds-f2\">Adresse e-mail</label><input class=\"ds-field\" id=\"ds-f2\" type=\"text\" placeholder=\"nom@exemple.fr\" aria-invalid=\"true\" /><p class=\"ds-field-error\">Indiquez votre adresse e-mail.</p></div></div>",
+      "css": ".ds-field-stage { background: #0a0a0a; padding: 32px; display: grid; gap: 24px; max-width: 420px; font-family: 'Archivo Variable', system-ui, -apple-system, 'Segoe UI', sans-serif; } .ds-field-label { display: block; margin-bottom: 8px; font-size: 14px; line-height: 20px; font-weight: 600; color: #f5f5f5; } .ds-field { display: block; width: 100%; box-sizing: border-box; min-height: 52px; padding: 12px 16px; font: inherit; font-size: 16px; color: #f5f5f5; caret-color: #d71e28; background: #141414; border: 1px solid #6b6b6b; border-radius: 0; transition: border-color 150ms cubic-bezier(0.16, 1, 0.3, 1); } .ds-field::placeholder { color: #8a8a8a; } .ds-field:hover { border-color: #8a8a8a; } .ds-field:focus, .ds-field:focus-visible { border-color: #f5f5f5; outline: 2px solid transparent; outline-offset: 2px; } .ds-field[aria-invalid=\"true\"] { border-color: #ff5a5f; } .ds-field-hint { margin: 8px 0 0; font-size: 14px; line-height: 20px; color: #a3a3a3; } .ds-field-error { margin: 8px 0 0; font-size: 14px; line-height: 20px; font-weight: 500; color: #ff5a5f; }"
+    },
+    {
+      "name": "Header Navigation",
+      "kind": "nav",
+      "refersTo": "nav-link",
+      "description": "Solid ink header with a hairline bottom edge: logotype, links in paper at 80% with a 1px red underline on the active one, Connexion and the compact red S'inscrire.",
+      "html": "<header class=\"ds-nav\"><a class=\"ds-nav-logo\" href=\"#\">Ciné Action <span>Festival</span></a><ul class=\"ds-nav-links\"><li><a href=\"#\">Le festival</a></li><li><a href=\"#\" aria-current=\"page\">Participer</a></li><li><a href=\"#\">FAQ</a></li><li><a href=\"#\">Contact</a></li></ul><div class=\"ds-nav-end\"><a class=\"ds-nav-link\" href=\"#\">Connexion</a><a class=\"ds-nav-cta\" href=\"#\">S'inscrire</a></div></header>",
+      "css": ".ds-nav { display: flex; align-items: center; justify-content: space-between; gap: 32px; height: 96px; padding: 0 64px; background: #0a0a0a; border-bottom: 1px solid #2a2a2a; font-family: 'Archivo Variable', system-ui, -apple-system, 'Segoe UI', sans-serif; } .ds-nav-logo { font-family: Anton, Impact, sans-serif; font-size: 22px; line-height: 1; letter-spacing: 0.02em; text-transform: uppercase; color: #f5f5f5; text-decoration: none; } .ds-nav-logo span { color: #a3a3a3; } .ds-nav-links { display: flex; gap: 36px; list-style: none; margin: 0; padding: 0; } .ds-nav-links a, .ds-nav-link { position: relative; padding: 8px 0; font-size: 15px; font-weight: 500; color: rgba(245, 245, 245, 0.8); text-decoration: none; transition: color 150ms cubic-bezier(0.16, 1, 0.3, 1); } .ds-nav-links a:hover, .ds-nav-link:hover { color: #f5f5f5; } .ds-nav-links a[aria-current=\"page\"] { color: #f5f5f5; } .ds-nav-links a[aria-current=\"page\"]::after { content: \"\"; position: absolute; left: 0; right: 0; bottom: -2px; height: 1px; background: #d71e28; } .ds-nav-links a:focus-visible, .ds-nav-link:focus-visible, .ds-nav-cta:focus-visible, .ds-nav-logo:focus-visible { outline: 2px solid #f5f5f5; outline-offset: 3px; } .ds-nav-end { display: flex; align-items: center; gap: 28px; } .ds-nav-cta { display: inline-flex; align-items: center; height: 44px; padding: 0 20px; font-size: 15px; font-weight: 600; color: #ffffff; background: #d71e28; text-decoration: none; transition: background-color 150ms cubic-bezier(0.16, 1, 0.3, 1); } .ds-nav-cta:hover { background: #b5141d; }"
+    },
+    {
+      "name": "FAQ Accordion Item",
+      "kind": "custom",
+      "refersTo": "faq-toggle",
+      "description": "Ruled question row with a 32px square toggle; open, the toggle fills Signal Red and the plus turns into a cross.",
+      "html": "<div class=\"ds-faq\"><details class=\"ds-faq-item\"><summary>Quand le thème imposé est-il annoncé ?<span class=\"ds-faq-toggle\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M12 4v16M4 12h16\"/></svg></span></summary><p>Le thème est dévoilé à l'ouverture des inscriptions, identique pour toutes et tous.</p></details><details class=\"ds-faq-item\" open><summary>Mon film doit-il contenir des arts martiaux ?<span class=\"ds-faq-toggle\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M12 4v16M4 12h16\"/></svg></span></summary><p>Les arts martiaux sont au cœur du festival, mais toute forme d'action est la bienvenue : combat, cascade, poursuite.</p></details></div>",
+      "css": ".ds-faq { background: #0a0a0a; padding: 16px 32px 32px; font-family: 'Archivo Variable', system-ui, -apple-system, 'Segoe UI', sans-serif; max-width: 760px; } .ds-faq-item { border-bottom: 1px solid #2a2a2a; } .ds-faq-item summary { list-style: none; display: flex; align-items: flex-start; justify-content: space-between; gap: 24px; padding: 24px 0; cursor: pointer; font-size: 20px; line-height: 28px; font-weight: 600; color: #f5f5f5; transition: color 150ms cubic-bezier(0.16, 1, 0.3, 1); } .ds-faq-item summary::-webkit-details-marker { display: none; } .ds-faq-item summary:hover { color: #a3a3a3; } .ds-faq-item summary:focus-visible { outline: 2px solid #f5f5f5; outline-offset: 3px; } .ds-faq-toggle { flex-shrink: 0; display: grid; place-items: center; width: 32px; height: 32px; margin-top: 2px; box-sizing: border-box; border: 1px solid #6b6b6b; color: #f5f5f5; transition: background-color 200ms, border-color 200ms, color 200ms; } .ds-faq-item summary:hover .ds-faq-toggle { border-color: #f5f5f5; } .ds-faq-toggle svg { width: 16px; height: 16px; fill: none; stroke: currentColor; stroke-width: 1.75; stroke-linecap: square; stroke-linejoin: miter; transition: transform 300ms cubic-bezier(0.16, 1, 0.3, 1); } .ds-faq-item[open] .ds-faq-toggle { background: #d71e28; border-color: #d71e28; color: #ffffff; } .ds-faq-item[open] .ds-faq-toggle svg { transform: rotate(45deg); } .ds-faq-item p { margin: 0; padding: 0 56px 32px 0; max-width: 40rem; font-size: 18px; line-height: 1.625; color: #a3a3a3; }"
+    },
+    {
+      "name": "Countdown",
+      "kind": "custom",
+      "refersTo": "countdown-cell",
+      "description": "Hairline countdown to the registration opening: label row with a provisional date, four Anton cells in a 1px frame over footage.",
+      "html": "<div class=\"ds-count-stage\"><div class=\"ds-count\"><p class=\"ds-count-head\"><span>Ouverture des inscriptions</span><span class=\"ds-count-date\">1 février 2027 · provisoire</span></p><ol class=\"ds-count-cells\"><li><span class=\"ds-count-num\">71</span><span class=\"ds-count-unit\">jours</span></li><li><span class=\"ds-count-num\">15</span><span class=\"ds-count-unit\">heures</span></li><li><span class=\"ds-count-num\">49</span><span class=\"ds-count-unit\">minutes</span></li><li><span class=\"ds-count-num\">16</span><span class=\"ds-count-unit\">secondes</span></li></ol></div></div>",
+      "css": ".ds-count-stage { background: #0a0a0a; padding: 32px; font-family: 'Archivo Variable', system-ui, -apple-system, 'Segoe UI', sans-serif; } .ds-count { max-width: 416px; } .ds-count-head { display: flex; align-items: baseline; justify-content: space-between; gap: 16px; margin: 0; font-size: 14px; line-height: 20px; } .ds-count-head span:first-child { font-weight: 600; color: #f5f5f5; } .ds-count-date { color: #a3a3a3; } .ds-count-cells { display: grid; grid-template-columns: repeat(4, 1fr); list-style: none; margin: 12px 0 0; padding: 0; border: 1px solid rgba(245, 245, 245, 0.25); background: rgba(10, 10, 10, 0.5); } .ds-count-cells li { padding: 16px; } .ds-count-cells li + li { border-left: 1px solid rgba(245, 245, 245, 0.25); } .ds-count-num { display: block; font-family: Anton, Impact, sans-serif; font-size: 44px; line-height: 1; font-variant-numeric: tabular-nums; color: #f5f5f5; } .ds-count-unit { display: block; margin-top: 8px; font-size: 12px; line-height: 16px; color: #a3a3a3; }"
+    },
+    {
+      "name": "Provisional Note",
+      "kind": "chip",
+      "refersTo": "provisional-note",
+      "description": "1px-bordered caption marking unconfirmed content; Control Hairline and Credit Grey on ink, Paper Rule and Graphite on paper.",
+      "html": "<div class=\"ds-prov-stage\"><div class=\"ds-prov-ink\"><p class=\"ds-prov ds-prov-dark\">Règlement provisoire, en cours de validation par l'organisation.</p></div><div class=\"ds-prov-paper\"><p class=\"ds-prov ds-prov-light\">Spécifications provisoires, en cours de validation.</p></div></div>",
+      "css": ".ds-prov-stage { font-family: 'Archivo Variable', system-ui, -apple-system, 'Segoe UI', sans-serif; } .ds-prov-ink { background: #0a0a0a; padding: 32px; } .ds-prov-paper { background: #f5f5f5; padding: 32px; } .ds-prov { display: inline-block; margin: 0; padding: 6px 12px; font-size: 14px; line-height: 20px; border-radius: 0; } .ds-prov-dark { border: 1px solid #6b6b6b; color: #a3a3a3; } .ds-prov-light { border: 1px solid #d4d4d4; color: #525252; }"
+    },
+    {
+      "name": "Ruled Definition List",
+      "kind": "card",
+      "refersTo": "band-paper",
+      "description": "The system's container instead of cards: hairline-ruled term and definition rows on ink, and caption-over-value rows ruled in Paper Rule on a paper band.",
+      "html": "<div class=\"ds-rules\"><dl class=\"ds-rules-ink\"><div><dt>Durée</dt><dd>2 min 30 maximum, génériques compris. Un film plus long n'est pas retenu.</dd></div><div><dt>Thème</dt><dd>Imposé et identique pour tous. Il est dévoilé à l'ouverture des inscriptions.</dd></div></dl><section class=\"ds-rules-paper\"><h3>Vidéo</h3><dl><div><dt>Fichier</dt><dd>MP4 ou MOV</dd></div><div><dt>Codec</dt><dd>H.264 ou Apple ProRes 422</dd></div></dl></section></div>",
+      "css": ".ds-rules { font-family: 'Archivo Variable', system-ui, -apple-system, 'Segoe UI', sans-serif; } .ds-rules-ink { margin: 0; padding: 32px; background: #0a0a0a; } .ds-rules-ink > div { display: grid; grid-template-columns: 2fr 6fr; gap: 32px; padding: 32px 0; border-bottom: 1px solid #2a2a2a; } .ds-rules-ink > div:first-child { border-top: 1px solid #2a2a2a; } .ds-rules-ink dt { font-size: 18px; line-height: 28px; font-weight: 600; color: #f5f5f5; } .ds-rules-ink dd { margin: 0; max-width: 40rem; font-size: 18px; line-height: 1.625; color: #a3a3a3; } .ds-rules-paper { padding: 32px; background: #f5f5f5; color: #0a0a0a; max-width: 420px; } .ds-rules-paper h3 { margin: 0; padding-bottom: 16px; border-bottom: 1px solid #0a0a0a; font-size: 24px; line-height: 32px; font-weight: 600; } .ds-rules-paper dl { margin: 0; } .ds-rules-paper dl > div { padding: 16px 0; border-bottom: 1px solid #d4d4d4; } .ds-rules-paper dt { font-size: 14px; line-height: 20px; color: #525252; } .ds-rules-paper dd { margin: 4px 0 0; font-size: 16px; line-height: 24px; font-weight: 500; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Screening Room",
+    "overview": "The house lights are down. The site is a near-black room in which the footage and the lettering do the work: a full-bleed stunt showreel, towering condensed capitals, off-white text set calmly beside them. One thing is lit red, and it points to the door candidates walk through: registration. This is the film-festival category standard played straight, held to the institutional restraint of the Festival de Cannes website: a structured programme, ruled tables, and nothing themed.\n\nThe page is generous and orderly. Sections breathe at 80 to 144 pixels of vertical space and sit left-aligned on a twelve-column grid, a display headline on the left and its lead on the right. Structure is drawn rather than boxed: one-pixel hairlines rule every list, table and grid, corners are square, and nothing casts a shadow. When a reader needs reference material (the competition's terms, the technical specifications) a light paper band interrupts the dark, like a printed programme handed out in the foyer.\n\nMotion is rare and therefore felt. There is one authored entrance, the hero title rising line by line over the first frame of the reel, and otherwise only quick colour feedback. Imagery is real footage and stills, always credited. The system rejects martial-arts kitsch (dragons, katanas, brush strokes), template pages of centred text, and the site's retired look of yellow, Comic Neue and blue buttons.",
+    "keyCharacteristics": [
+      "Near-black ground with off-white type; colour comes from the footage, not the interface.",
+      "One signal red, spent only on the action that moves a candidate forward and on live states.",
+      "Anton in uppercase for display, Archivo Variable in sentence case for everything else.",
+      "Square corners, 1px hairlines, no shadows; the hero scrim is the only gradient.",
+      "Left-aligned twelve-column composition: headline left, lead right.",
+      "A single authored entrance; everything else is 150 to 300ms feedback.",
+      "Unconfirmed facts are marked as provisional, never stated as settled."
+    ],
+    "rules": [
+      {
+        "name": "The One Red Rule",
+        "body": "Red marks the way in and what is on. It fills the primary action and live states and nothing else: never a heading, a decorative rule, a resting border or an illustration.",
+        "section": "colors"
+      },
+      {
+        "name": "The Lit Red Rule",
+        "body": "Red text on ink is always Lit Signal (#ff5a5f). Signal Red (#d71e28) on ink falls to 3.87:1 and stays a fill.",
+        "section": "colors"
+      },
+      {
+        "name": "The Two Grounds Rule",
+        "body": "Ink is the ground and paper is the exception: at most one paper band per page. On it, secondary text switches to Graphite, rules to Paper Rule or ink, and the focus ring to ink. Credit Grey never sits on paper (2.31:1).",
+        "section": "colors"
+      },
+      {
+        "name": "The Accent Clearance Rule",
+        "body": "Anton that can wrap sets line-height 1.15, because its accented capitals rise to 1.11em and strike the line above at anything tighter. Tighter leading is allowed only where no accented capital can reach a second line: the hero title (0.9), the footer logotype (0.95), single-word craft verbs (0.82).",
+        "section": "typography"
+      },
+      {
+        "name": "The Two Voices Rule",
+        "body": "Anton speaks in capitals; Archivo explains in sentence case. Anton never sets body copy, labels or buttons. Archivo is never uppercase, never heavier than 600, never larger than 1.875rem.",
+        "section": "typography"
+      },
+      {
+        "name": "The Headline-Left Rule",
+        "body": "A section opens with its Anton headline on the left (seven of twelve columns) and its Archivo lead on the right (five columns), the lead aligned to the headline's foot. Below 1024px they stack, headline first. Nothing is centred.",
+        "section": "layout"
+      },
+      {
+        "name": "The Flat Rule",
+        "body": "Nothing casts a shadow. Depth is tonal (ink, Raised Black, paper) and linear (1px hairlines). The hero scrim is the only gradient, and it exists for legibility over footage.",
+        "section": "elevation"
+      },
+      {
+        "name": "The One-Pixel Grid Rule",
+        "body": "Cell grids are drawn as a 1px gap over a hairline-coloured backing inside a 1px frame, so every interior rule is exactly one pixel and never doubles.",
+        "section": "elevation"
+      },
+      {
+        "name": "The Square Rule",
+        "body": "Every corner is 0px and every border is 1px. No pill or circular containers, no rounding on any control.",
+        "section": "shapes"
+      },
+      {
+        "name": "The Visible Provisional Rule",
+        "body": "Unconfirmed facts come from the festival data file, never from hard-coded copy, and are marked where they appear: the provisional note on rules, specifications and answers, \"· provisoire\" beside the countdown date, \"à annoncer\" for unknown dates and venue, \"· bientôt\" for unlinked accounts. An unknown fact is never invented.",
+        "section": "components"
+      }
+    ],
+    "dos": [
+      "Do reserve Signal Red (#d71e28) for the action that moves a candidate forward and for on-states, and hover it to Deep Signal (#b5141d).",
+      "Do use Lit Signal (#ff5a5f) for any red text on ink, including error messages and the active mobile-menu item.",
+      "Do set every Anton line that can wrap in uppercase at line-height 1.15 with -0.005em tracking.",
+      "Do draw structure with 1px rules: Hairline (#2a2a2a) between rows on ink, Control Hairline (#6b6b6b) around controls, Paper Rule (#d4d4d4) on paper, ink for emphasis rules on paper.",
+      "Do open sections with the headline on the left and the lead on the right of the twelve-column grid, inside the 90rem container.",
+      "Do give every interactive element a 150ms colour transition and the 2px Programme Paper focus ring at a 3px offset (ink on paper bands).",
+      "Do run all motion on the expo ease-out, cubic-bezier(0.16, 1, 0.3, 1), behind prefers-reduced-motion: no-preference, starting from content that is visible by default.",
+      "Do draw new icons on a 24px grid with a 1.75 stroke, square caps, mitre joins and currentColor.",
+      "Do caption and credit every still and clip below a hairline.",
+      "Do route unconfirmed facts through the festival data file and mark them as provisional where they appear."
+    ],
+    "donts": [
+      "Don't round a corner, cast a shadow, or add a gradient other than the hero's legibility scrim.",
+      "Don't set Signal Red (#d71e28) as text on ink, or Credit Grey (#a3a3a3) as text on paper.",
+      "Don't add a second authored entrance; everything below the hero appears without animation.",
+      "Don't set Archivo in uppercase or heavier than 600, and don't set body copy, labels or buttons in Anton.",
+      "Don't centre section text; every section aligns left on the grid.",
+      "Don't put a label above a section headline; the Anton headline opens its section on its own.",
+      "Don't use dragons, katanas, brush strokes or other martial-arts kitsch, and don't bring back the retired yellow (#FCCD04), Comic Neue and blue-button look.",
+      "Don't use emoji or Unicode glyphs as icons; the middle dot is punctuation only.",
+      "Don't state an unconfirmed date, venue, prize or duration as settled."
+    ]
+  }
+}

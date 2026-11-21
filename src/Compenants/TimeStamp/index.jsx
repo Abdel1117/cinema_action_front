@@ -44,7 +44,10 @@ export default function TimeStamp({ target = FESTIVAL.registrationOpens, classNa
         <div className={className}>
             <p className="flex items-baseline justify-between gap-4 text-sm">
                 <span className="font-semibold text-paper">Ouverture des inscriptions</span>
-                <span className="text-mute">{dateLabel}</span>
+                <span className="text-mute">
+                    {dateLabel}
+                    {FESTIVAL.provisional && ' · provisoire'}
+                </span>
             </p>
             <p className="sr-only">
                 Les inscriptions ouvrent le {dateLabel}, dans {units[0].value} jours.

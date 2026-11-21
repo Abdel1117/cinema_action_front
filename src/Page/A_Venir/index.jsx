@@ -5,7 +5,7 @@ import { ArrowRight, ArrowUpRight, SocialIcon } from '../../Compenants/Icons'
 import { FESTIVAL } from '../../assets/Data/festival'
 
 const DEFAULT_LEAD =
-    'Le formulaire de contact arrive bientôt. En attendant, retrouvez le festival et écrivez-nous sur les réseaux.'
+    'Le formulaire de contact et les comptes du festival sur les réseaux arrivent bientôt. Les réponses aux questions les plus fréquentes sont déjà en ligne.'
 
 export default function A_VENIR({ title = 'Contact', lead = DEFAULT_LEAD }) {
     return (
@@ -19,16 +19,26 @@ export default function A_VENIR({ title = 'Contact', lead = DEFAULT_LEAD }) {
                 <ul className="border-t border-line">
                     {FESTIVAL.social.map((s) => (
                         <li key={s.id} className="border-b border-line">
-                            <a
-                                href={s.href}
-                                className="group flex items-center justify-between gap-6 py-7 transition-colors duration-150 hover:text-mute lg:py-9"
-                            >
-                                <span className="flex items-center gap-5 sm:gap-8">
-                                    <SocialIcon id={s.id} className="h-7 w-7 shrink-0 sm:h-9 sm:w-9" />
-                                    <span className="display text-[clamp(2.5rem,7vw,5.5rem)]">{s.label}</span>
-                                </span>
-                                <ArrowUpRight className="h-7 w-7 shrink-0 transition-transform duration-300 ease-out group-hover:-translate-y-1 group-hover:translate-x-1" />
-                            </a>
+                            {s.href ? (
+                                <a
+                                    href={s.href}
+                                    className="group flex items-center justify-between gap-6 py-7 transition-colors duration-150 hover:text-mute lg:py-9"
+                                >
+                                    <span className="flex items-center gap-5 sm:gap-8">
+                                        <SocialIcon id={s.id} className="h-7 w-7 shrink-0 sm:h-9 sm:w-9" />
+                                        <span className="display text-[clamp(2.5rem,7vw,5.5rem)]">{s.label}</span>
+                                    </span>
+                                    <ArrowUpRight className="h-7 w-7 shrink-0 transition-transform duration-300 ease-out group-hover:-translate-y-1 group-hover:translate-x-1" />
+                                </a>
+                            ) : (
+                                <div className="flex items-center justify-between gap-6 py-7 text-mute-soft lg:py-9">
+                                    <span className="flex items-center gap-5 sm:gap-8">
+                                        <SocialIcon id={s.id} className="h-7 w-7 shrink-0 sm:h-9 sm:w-9" />
+                                        <span className="display text-[clamp(2.5rem,7vw,5.5rem)]">{s.label}</span>
+                                    </span>
+                                    <span className="shrink-0 text-sm font-medium">Bientôt</span>
+                                </div>
+                            )}
                         </li>
                     ))}
                 </ul>

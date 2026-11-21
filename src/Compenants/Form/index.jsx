@@ -47,6 +47,7 @@ export function SelectChevron() {
             fill="none"
             stroke="currentColor"
             strokeWidth="1.75"
+            strokeLinecap="square"
         >
             <path d="M6 9l6 6 6-6" />
         </svg>
